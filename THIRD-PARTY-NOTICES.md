@@ -1,6 +1,6 @@
 # Third-party notices
 
-The original-code license has not yet been selected. The following third-party terms remain applicable.
+Original OpenRideSync code is licensed under MIT (see LICENSE). The following third-party terms remain applicable.
 
 - The Material icon path data used by app/src/main/java/org/openridesync/app/ui/OemUiAssets.kt comes from Google's Material Design Icons, licensed under Apache License 2.0: https://github.com/google/material-design-icons . The paths are used as public-build fallbacks and rendered through Compose. The Apache 2.0 license is included in licenses/Apache-2.0.txt.
 - The Gradle Wrapper is provided by Gradle under Apache License 2.0: https://github.com/gradle/gradle . Its version and checksums are pinned by this project.
