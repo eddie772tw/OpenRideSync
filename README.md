@@ -11,11 +11,11 @@
 OpenRideSync 面向使用 Honda RoadSync Gen1 通訊的車載儀表，將帳號、車庫、藍牙連線、把手互動、媒體與診斷整合到獨立的 Android App。專案使用 Kotlin、Jetpack Compose 與自行實作的 Java Gen1 encoder，延續既有的車端通訊研究，逐步建立面向使用者的騎乘流程。
 
 > [!NOTE]
-> 專案正開發第一個使用者版本 `0.1.0-alpha.1`，尚未發布可安裝的 Alpha。OpenRideSync 並非 Honda 官方 App；公開原始碼的預設建置不含原服務登入設定，可查看本機介面、設定導引與診斷，帳號及車輛服務另需適當配置。
+> 首個原始碼預發行為 [`v0.1.0-alpha.1`](https://github.com/eddie772tw/OpenRideSync/releases/tag/v0.1.0-alpha.1)，本次不附 APK。OpenRideSync 並非 Honda 官方 App；公開原始碼的預設建置不含原服務登入設定，可查看本機介面、設定導引與診斷，帳號及車輛服務另需適當配置。
 
 ## 畫面預覽
 
-以下為 Android 模擬器執行開發中 Alpha 的實際截圖，使用繁體中文、公開圖示與系統字型。畫面取自[首版開發分支](https://github.com/eddie772tw/OpenRideSync/pull/1)，未登入帳號、未連接車輛；空白或未授權狀態依 App 實際結果呈現。
+以下為 Android 模擬器執行 Alpha 的實際截圖，使用繁體中文、公開圖示與系統字型。畫面取自[首版介面實作](https://github.com/eddie772tw/OpenRideSync/pull/1)，未登入帳號、未連接車輛；空白或未授權狀態依 App 實際結果呈現。
 
 <table>
   <tr>
@@ -49,7 +49,7 @@ OpenRideSync 面向使用 Honda RoadSync Gen1 通訊的車載儀表，將帳號�
 
 ### 了解目前版本
 
-目前提供原始碼與[首版 Alpha 開發 PR](https://github.com/eddie772tw/OpenRideSync/pull/1)。一般使用者可先閱讀[使用流程](docs/GETTING-STARTED.md)與[相容性範圍](docs/COMPATIBILITY.md)；自行建置者請先確認是否需要原服務登入設定，以及 APK 的簽署與升級方式。
+目前提供 [`v0.1.0-alpha.1` 原始碼預發行](https://github.com/eddie772tw/OpenRideSync/releases/tag/v0.1.0-alpha.1)，尚未提供安裝 APK。版本變更見 [CHANGELOG](CHANGELOG.md)。一般使用者可先閱讀[使用流程](docs/GETTING-STARTED.md)與[相容性範圍](docs/COMPATIBILITY.md)；自行建置者請先確認是否需要原服務登入設定，以及 APK 的簽署與升級方式。
 
 ### 從原始碼建置
 
