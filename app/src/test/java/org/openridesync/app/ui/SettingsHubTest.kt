@@ -79,4 +79,20 @@ class SettingsHubTest {
             compose.onNodeWithTag("settings_handlebar").assertDoesNotExist()
         }
     }
+
+    @Test fun aboutShowsArtifactIdentityAndConfigurationWithoutImplyingSignIn() {
+        val configured = mutableStateOf(false)
+        var routes = 0
+        compose.setContent { MaterialTheme {
+            SettingsHubContent({ routes++ }, {}, AppearanceMode.SYSTEM, {}, hondaConfigured = configured.value)
+        } }
+        compose.onNodeWithTag("settings_about").performScrollTo().performClick()
+        compose.onNodeWithText("版本：${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})").assertExists()
+        compose.onNodeWithText("來源版本：${BuildConfig.SOURCE_COMMIT}").assertExists()
+        compose.onNodeWithText(clientConfigurationMessage(false)).assertExists()
+        compose.runOnIdle { configured.value = true }
+        compose.onNodeWithText(clientConfigurationMessage(true)).assertExists()
+        compose.onNodeWithText(clientConfigurationMessage(false)).assertDoesNotExist()
+        compose.runOnIdle { assertEquals(0, routes) }
+    }
 }

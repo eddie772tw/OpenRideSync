@@ -45,8 +45,8 @@ android {
         minSdk = 30
         targetSdk = 36
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        versionCode = 1
-        versionName = "0.1.0-dev"
+        versionCode = 2
+        versionName = "0.1.0-alpha.1"
         buildConfigField("String", "SOURCE_COMMIT", "\"$sourceCommit\"")
         buildConfigField("boolean", "HONDA_CONFIGURED", providers.gradleProperty("withHondaConfig").getOrElse("false").toBooleanStrict().toString())
     }

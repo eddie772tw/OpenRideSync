@@ -10,6 +10,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
+import org.openridesync.app.BuildConfig
 
 /** Presentation facts only. This is not a permission, pairing, or vehicle-readiness gate. */
 internal data class ShellStatus(val signedIn: Boolean, val accountMessage: String, val rideMessage: String)
@@ -39,15 +40,23 @@ private fun Entry(title: String, detail: String, action: String, tag: String, on
 }
 
 @Composable
-internal fun WelcomeScreen(onBegin: () -> Unit, onSkip: () -> Unit) {
+internal fun WelcomeScreen(onBegin: () -> Unit, onSkip: () -> Unit,
+    hondaConfigured: Boolean = BuildConfig.HONDA_CONFIGURED) {
     ShellPage("歡迎使用 OpenRideSync", "welcome_screen") {
-        Text("這是初期重構開發版。導覽與功能仍在完善，尚不能當作實車測試候選。")
+        Text("Alpha · ${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})")
+        Text("這是第一個使用者版本的 Alpha 開發版，並非 Honda 官方 App。請先確認此版本的相容性與驗收範圍。")
+        Text(clientConfigurationMessage(hondaConfigured))
         Text("先了解帳號、權限與車輛設定，再選擇要開啟的功能。你可以略過，之後從首頁的「開始設定」回來。")
         Text("查看介紹不會登入、要求權限、掃描或連接車輛。每項操作都需要你另行選擇。")
         Button(onClick = onBegin, modifier = Modifier.fillMaxWidth().testTag("welcome_begin")) { Text("開始設定") }
         TextButton(onClick = onSkip, modifier = Modifier.fillMaxWidth().testTag("welcome_skip")) { Text("稍後設定，先看首頁") }
     }
 }
+
+internal fun clientConfigurationMessage(configured: Boolean): String = if (configured)
+    "此版本已包含原服務登入設定。這不代表已登入；請到帳號頁確認登入與資料讀取結果。"
+else
+    "此版本未包含原服務登入設定，無法登入或使用車輛服務。可先查看設定導引、權限說明與本機診斷。"
 
 @Composable
 internal fun SetupScreen(status: ShellStatus, onOpen: (String) -> Unit, onBack: () -> Unit,
@@ -91,8 +100,8 @@ internal fun SetupScreen(status: ShellStatus, onOpen: (String) -> Unit, onBack: 
                 Text(status.accountMessage)
                 Text("目前連線：${status.rideMessage}")
                 Text("${if (status.signedIn) "帳號相關功能可從首頁進入，仍需各自的權限、網路或可用播放器。" else "目前可用：設定導引、權限說明、連線狀態與本機診斷；帳號功能需要登入。"}")
-                Text("導覽走到這裡不代表設定全部完成。完整導航、通訊、配對引導與騎乘體驗仍在初期開發，尚非實車測試候選。")
-                Button(onClick = { onOpen("home") }, modifier = Modifier.fillMaxWidth().testTag("setup_explore")) { Text("開始探索開發版") }
+                Text("導覽走到這裡不代表設定全部完成。連車前請確認帳號、權限與這個版本的相容性；完整功能與長時間穩定性仍在驗證。")
+                Button(onClick = { onOpen("home") }, modifier = Modifier.fillMaxWidth().testTag("setup_explore")) { Text("開始探索 Alpha") }
             }
         }
         TextButton(onClick = { onOpen("home") }, modifier = Modifier.fillMaxWidth().testTag("setup_home")) { Text("稍後繼續，先回首頁") }
