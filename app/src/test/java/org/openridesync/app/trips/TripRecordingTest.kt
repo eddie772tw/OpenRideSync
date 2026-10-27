@@ -16,6 +16,7 @@ import org.junit.Test
 import org.junit.rules.TemporaryFolder
 import org.junit.runner.RunWith
 import org.openridesync.app.auth.AuthState
+import org.openridesync.app.BuildConfig
 import org.openridesync.app.auth.AuthStatus
 import org.openridesync.honda.wire.PipelineWire
 import org.robolectric.RobolectricTestRunner
@@ -84,7 +85,7 @@ class TripRecordingTest {
         val first = points()
         assertEquals(2, first.size); assertEquals(0f, first[0].distance)
         assertTrue(first[1].distance > 0f)
-        assertEquals(1000L, first[0].time); assertEquals(1, first[0].appVersionCode)
+        assertEquals(1000L, first[0].time); assertEquals(BuildConfig.VERSION_CODE, first[0].appVersionCode)
         assertFalse(first[0].isDebug)
         assertEquals("synthetic-model", first[0].vehicleSeriesCode)
         assertEquals(attempt, first[0].appSessionId)
