@@ -88,6 +88,8 @@ class HostComposeLayoutTest {
             WelcomeScreen({ actions += "begin" }, { actions += "skip" })
         }
         compose.runOnIdle { assertTrue(actions.isEmpty()) }
+        compose.onNodeWithText("Alpha · ${org.openridesync.app.BuildConfig.VERSION_NAME} (${org.openridesync.app.BuildConfig.VERSION_CODE})").assertExists()
+        compose.onNodeWithText(clientConfigurationMessage(false)).assertExists()
         assertRenderedViewport()
         clickReachable("welcome_begin")
         clickReachable("welcome_skip")

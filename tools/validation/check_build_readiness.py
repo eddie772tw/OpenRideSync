@@ -25,8 +25,8 @@ from dex_build_config import Dex, DexError
 PROFILE = {
     "name": "clean-unconfigured-debug-review",
     "package": "org.openridesync.app",
-    "version_code": 1,
-    "version_name": "0.1.0-dev",
+    "version_code": 2,
+    "version_name": "0.1.0-alpha.1",
     "min_sdk": 30,
     "target_sdk": 36,
     "debuggable": True,

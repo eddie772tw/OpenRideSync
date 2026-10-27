@@ -26,6 +26,7 @@ internal fun SettingsHubContent(
     accountMessage: String = "登入與帳號讀取狀態請查看帳號頁。",
     syncReadMessage: String = "帳號、車庫與騎乘紀錄各自顯示讀取結果；此處沒有全域同步開關。",
     developer: Boolean = BuildConfig.DEBUG,
+    hondaConfigured: Boolean = BuildConfig.HONDA_CONFIGURED,
 ) {
     var document by rememberSaveable { mutableStateOf<String?>(null) }
     val back: () -> Unit = { if (document != null) document = null else onBack() }
@@ -38,7 +39,7 @@ internal fun SettingsHubContent(
                 verticalArrangement = Arrangement.spacedBy(16.dp)) {
                 TextButton(onClick = back, modifier = Modifier.testTag("shell_back")) { Text("返回") }
                 if (document != null) {
-                    SettingsDocument(document!!)
+                    SettingsDocument(document!!, hondaConfigured)
                 } else {
                     Text("設定與協助", style = MaterialTheme.typography.headlineMedium)
                     SettingsSection("帳號、登入與同步", "settings_section_account") {
@@ -113,13 +114,15 @@ private fun SettingsAction(label: String, tag: String, action: () -> Unit) {
 
 /** Local readable documents; no remote content, implied acceptance or automatic browser launch. */
 @Composable
-private fun SettingsDocument(id: String) {
+private fun SettingsDocument(id: String, hondaConfigured: Boolean) {
     val (title, paragraphs) = when (id) {
         "about" -> "關於與建置資訊" to listOf(
-            "OpenRideSync · 獨立研究重構版。尚非實車測試候選；不是 Honda 官方 App。",
+            "OpenRideSync Alpha · 非 Honda 官方 App。",
             "版本：${BuildConfig.VERSION_NAME} (${BuildConfig.VERSION_CODE})",
             "套件：${BuildConfig.APPLICATION_ID}", "建置：${BuildConfig.BUILD_TYPE}", "來源版本：${BuildConfig.SOURCE_COMMIT}",
-            "既有修改版的實車結果不代表本重構版已通過驗收。")
+            clientConfigurationMessage(hondaConfigured),
+            "目前開發主線為 Gen1。一次歷史實車連線成功不代表此版本已完成所有功能與穩定性驗收。",
+            "版本說明與相容性：https://github.com/eddie772tw/OpenRideSync")
         "privacy" -> "資料處理與限制" to listOf(
             "這是目前功能的資料處理說明，不是完整法律隱私政策。",
             "正常登入由 Google／Firebase 流程處理；登入後的 Honda 帳號、車庫、騎乘紀錄與天氣讀取由對應功能處理。服務讀取需要網路，失敗以各頁實際狀態為準。",
@@ -130,25 +133,24 @@ private fun SettingsDocument(id: String) {
             "登出不等於刪除服務端帳號或所有本機資料；本頁沒有提供帳號刪除或完整資料清除功能。",
             "此說明不承諾第三方服務的保存期限或刪除方式，應另以服務提供者的實際政策為準。")
         "licenses" -> "開源元件與授權參考" to listOf(
-            "下列來源依此專案建置宣告整理，是元件索引，尚非完整第三方授權聲明或隨包授權全文。",
-            "AndroidX Activity、Lifecycle、Jetpack Compose Material 3：app/build.gradle.kts 與 gradle/libs.versions.toml 宣告的 AndroidX 元件。",
-            "Kotlin 與 kotlinx.coroutines：gradle/libs.versions.toml 的 Kotlin／coroutines 宣告。",
-            "OkHttp：com.squareup.okhttp3:okhttp，由版本目錄宣告。",
-            "AndroidSVG 1.4：com.caverock:androidsvg-aar，用於讀取已安裝 Maps 的 SVG 圖示；Apache License 2.0。",
-            "Firebase Authentication：app/build.gradle.kts 的 Firebase BOM 與 firebase-auth 宣告。",
-            "此倉庫目前沒有可供此頁重製的完整 LICENSE／NOTICE 清單。正式散布前仍須核對實際依賴及傳遞依賴、收錄各自授權全文與必要聲明；本頁不宣稱已完成。",
+            "OpenRideSync 原創程式採 MIT 授權；第三方元件保留各自授權。",
+            "公開圖示使用 Google Material Design Icons，採 Apache License 2.0。",
+            "本 App 使用 AndroidX／Jetpack Compose、Kotlin／coroutines、OkHttp、AndroidSVG、Firebase Authentication、gRPC 與 Protocol Buffers。",
+            "公開原始碼附有 LICENSE、THIRD-PARTY-NOTICES 與 Apache License 2.0 全文：https://github.com/eddie772tw/OpenRideSync 。此處是元件索引，完整 APK 的依賴及必要聲明仍須於散布前核對。",
             "原廠 APK、私有字型、圖片與登入設定不屬於此開源元件索引，也不由本頁授予使用權。")
         "terms" -> "服務條款狀態" to listOf(
             "OpenRideSync 自身服務條款尚未定稿。此頁只說明目前狀態，沒有同意按鈕，也不代表你接受任何新協議。",
             "Google、Firebase、Honda 或其他外部服務的使用條件仍應依其實際流程及條款確認；本 App 不代替這些服務提供授權或保證。",
-            "研究功能仍不完整。請勿把目前介面、歷史原型驗收或本機測試當作可安全上路的保證。")
+            "Alpha 功能仍在驗證。請先查看版本相容性與限制，並在車輛靜止時完成設定。")
         else -> "使用說明" to listOf(
-            "帳號與登入：回到設定中的帳號入口，查看真實登入、帳號讀取與登出狀態。",
+            "版本與設定：先在「關於與建置資訊」確認版本、來源與登入設定。未包含設定的版本可使用本機說明與診斷，無法登入或連車。",
+            "帳號與登入：從設定導引開啟帳號頁，以自己的帳號完成正常登入，再確認帳號讀取結果。",
             "資料讀取：車庫與騎乘紀錄是分開的功能；到各自頁面操作並確認結果，沒有全域同步進度。",
             "外觀：選擇跟隨系統、日間或夜間，會保存到此 App 的本機設定。",
             "權限與設定：從設定導引了解功能，再到權限頁檢查系統授權。查看說明本身不會授權、配對或連車。",
+            "車輛與連線：車輛靜止時，在車庫明確選擇車輛並完成配對，再明確連線；確認儀表及把手互動，結束時明確停止。",
             "診斷：從診斷與匯出頁檢查結果，只有明確匯出才會交由你選擇保存位置。",
-            "文件依據：apps/open-roadsync/android/README.md、apps/open-roadsync/auth/README.md，以及 docs/decisions/ADR-0002-APP-RECONSTRUCTION.md。此處提供離線摘要，不會自動開啟外部網站。")
+            "完整使用流程與相容性：https://github.com/eddie772tw/OpenRideSync 。此處提供離線摘要，不會自動開啟外部網站。")
     }
     Text(title, style = MaterialTheme.typography.headlineMedium, modifier = Modifier.testTag("settings_document_$id"))
     paragraphs.forEach { Text(it) }
