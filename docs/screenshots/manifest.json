@@ -1,0 +1,57 @@
+{
+  "source_commit": "378afc992de5204eb4ff38e19490e04178d98ee6",
+  "apk_sha256": "060ee6a35b27181fd08b0b4b35394a1df5f9505e7e074f67bff5bba41eb5ba23",
+  "version_name": "0.1.0-alpha.1",
+  "version_code": 2,
+  "capture_method": "adb exec-out screencap -p",
+  "android_api": 35,
+  "locale": "zh-TW",
+  "withHondaConfig": false,
+  "withOemUiAssets": false,
+  "account_signed_in": false,
+  "vehicle_connected": false,
+  "images": [
+    {
+      "file": "diagnostics.png",
+      "width": 1080,
+      "height": 2400,
+      "bytes": 275499,
+      "sha256": "2e7ec83c6ec7a0f463255c0efeb39fb4e698e4322355a8af19083bd96d8f8f94"
+    },
+    {
+      "file": "home.png",
+      "width": 1080,
+      "height": 2400,
+      "bytes": 188631,
+      "sha256": "dd4febdf3a6ecfba079c0d7c35952f486ca274980b146bbe8be248a0e0f9f8dd"
+    },
+    {
+      "file": "permissions.png",
+      "width": 1080,
+      "height": 2400,
+      "bytes": 307462,
+      "sha256": "02aeef67e2819001eddccea418a86782d20423447e0ac2374883cfa47d8e1128"
+    },
+    {
+      "file": "quick-replies.png",
+      "width": 1080,
+      "height": 2400,
+      "bytes": 169169,
+      "sha256": "5e9a66792b0ed8d2c27b888c86dec45b6816dab33d2663371e2897e668e3dd96"
+    },
+    {
+      "file": "settings-dark.png",
+      "width": 1080,
+      "height": 2400,
+      "bytes": 175349,
+      "sha256": "e2b26b6387ce1dcb2195604230348e14f7e94b91174b027e9f6fc445c360837c"
+    },
+    {
+      "file": "setup.png",
+      "width": 1080,
+      "height": 2400,
+      "bytes": 266802,
+      "sha256": "78c8550ac4c1ee7c11dffb9290fe1970c7f1d8dd4a33102f3dceb47e2f8d4cf6"
+    }
+  ]
+}
