@@ -1,0 +1,5 @@
+<resources>
+    <string name="ride_weather">Weather forecast</string>
+    <string name="ride_weather_loading">Fetching weather</string>
+    <string name="ride_weather_unavailable">Weather unavailable</string>
+</resources>

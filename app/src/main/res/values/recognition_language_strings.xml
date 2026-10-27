@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="recognition_language_back">Back</string>
+    <string name="recognition_language_title">Speech recognition language</string>
+    <string name="recognition_language_explanation">This local choice controls voice replies only. It does not change the App language, text-to-speech language or system recognition provider. Opening this page does not require microphone permission.</string>
+    <string name="recognition_language_local_policy">Automatic uses the App locale, an already read Honda country of residence when available, and the provider’s ordered language candidates. A voice reply queries the provider before recording and falls back to the device default language if the query fails. Explicit choices stay independent of the country.</string>
+    <string name="recognition_language_automatic">Automatic</string>
+    <string name="recognition_language_automatic_request">Initial automatic request before provider fallback: %1$s</string>
+    <string name="recognition_language_locale_candidate">en-US</string>
+    <string name="recognition_language_save_failed">The selection could not be saved. The previous selection remains active.</string>
+    <string name="recognition_language_query">Read available recognition languages</string>
+    <string name="recognition_language_query_privacy">Queries the current provider without recording, requesting permission, downloading models or changing system settings. The provider may contact its own service.</string>
+    <string name="recognition_language_loading">Reading provider capabilities…</string>
+    <string name="recognition_language_timeout">The provider query timed out. Your selection has not changed.</string>
+    <string name="recognition_language_query_unsupported">This provider does not expose this language capability query. Your selection has not changed.</string>
+    <string name="recognition_language_query_denied">The provider rejected the capability query. This page will not request microphone permission; your selection has not changed.</string>
+    <string name="recognition_language_query_unavailable">Provider capabilities could not be read. Your selection has not changed.</string>
+    <string name="recognition_language_provider">Provider: %1$s</string>
+    <string name="recognition_language_requested">Queried request language: %1$s</string>
+    <string name="recognition_language_none_reported">None reported</string>
+    <string name="recognition_language_installed">On-device models reported installed</string>
+    <string name="recognition_language_pending">On-device models pending download</string>
+    <string name="recognition_language_supported">On-device support requiring a download</string>
+    <string name="recognition_language_online">Online recognition reported supported</string>
+    <string name="recognition_language_legacy">Legacy provider-reported languages</string>
+    <string name="recognition_language_legacy_warning">Android 12 and earlier can only expose optional provider language details. This list does not distinguish installed models, pending downloads or online recognition.</string>
+    <string name="recognition_language_support_warning">This is the provider response for this request, not proof of actual recognition. Installed models do not force offline recognition; pending or supported models are not installed models.</string>
+    <string name="recognition_language_not_queried">Current capabilities have not been queried. Saved selection remains available.</string>
+    <string name="recognition_language_cached_title">Last queried resolution — historical</string>
+    <string name="recognition_language_cached">Request: %1$s\nApp locale: %2$s\nProvider: %3$s\nQuery source: %4$s</string>
+    <string name="recognition_language_cached_environment">Residence used: %1$s\nSystem locale: %2$s\nDevice default: %3$s</string>
+    <string name="recognition_language_cached_warning">This separate cache does not select a language or establish current availability. Re-query after changing the App locale or provider.</string>
+</resources>

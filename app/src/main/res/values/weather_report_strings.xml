@@ -1,0 +1,5 @@
+<resources>
+    <string name="weather_report_intro">This is the weather forecast for %1$s</string>
+    <string name="weather_report_line">In %1$s the weather and temperature will be %2$s and %3$s</string>
+    <plurals name="weather_report_hours"><item quantity="one">%d hour</item><item quantity="other">%d hours</item></plurals>
+</resources>

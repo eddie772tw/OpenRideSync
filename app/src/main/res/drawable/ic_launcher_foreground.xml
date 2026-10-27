@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Original OpenRideSync road mark. No OEM artwork or private assets. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M40,34 L46,34 L39,74 L32,74 Z M62,34 L68,34 L76,74 L69,74 Z" />
+    <path android:fillColor="#65DDCD"
+        android:pathData="M52,35 L56,35 L56,43 L52,43 Z M51,49 L57,49 L57,57 L51,57 Z M50,64 L58,64 L58,73 L50,73 Z" />
+</vector>

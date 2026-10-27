@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <queries>
+        <package android:name="org.openridesync.app.test" />
+    </queries>
+    <application>
+        <activity android:name="org.openridesync.app.calls.CallFixtureActivity" android:exported="false" />
+        <service android:name="org.openridesync.app.calls.CallFixtureService"
+            android:exported="false" android:foregroundServiceType="shortService" />
+    </application>
+</manifest>

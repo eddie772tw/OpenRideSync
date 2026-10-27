@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quick_reply_default_1">我正在駕駛中。</string>
+    <string name="quick_reply_default_2">即將抵達。</string>
+    <string name="quick_reply_default_3">我會稍晚抵達。</string>
+    <string name="quick_reply_default_4">了解</string>
+    <string name="quick_reply_default_5">否</string>
+    <string name="quick_reply_title">快速回覆</string>
+    <string name="quick_reply_local_only">僅保存在這支手機的此 App。編輯及順序變更需按儲存才會生效，取消會捨棄變更。</string>
+    <string name="quick_reply_corrupt">無法讀取已保存的設定，原值已保留。請明確選擇全部還原，再按儲存取代原設定。</string>
+    <string name="quick_reply_restore_all">全部還原</string>
+    <string name="quick_reply_save">儲存</string>
+    <string name="quick_reply_saving">儲存中…</string>
+    <string name="quick_reply_saved">已保存在這支手機。</string>
+    <string name="quick_reply_failed">儲存失敗，變更尚未保存，請重試。</string>
+    <string name="quick_reply_cancel">取消</string>
+    <string name="quick_reply_position">回覆 %1$d</string>
+    <string name="quick_reply_edit">編輯</string>
+    <string name="quick_reply_restore">還原</string>
+    <string name="quick_reply_up">上移</string>
+    <string name="quick_reply_down">下移</string>
+    <string name="quick_reply_message">回覆文字</string>
+    <string name="quick_reply_invalid_text">請輸入 1–2000 字元，勿使用不支援的控制字元。</string>
+    <string name="quick_reply_use_text">套用文字</string>
+    <string name="quick_reply_choose_default">選擇預設回覆</string>
+</resources>

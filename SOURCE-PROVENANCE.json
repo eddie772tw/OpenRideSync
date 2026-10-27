@@ -1,0 +1,1628 @@
+{
+  "research_repository": "eddie772tw/roadsync-lab",
+  "research_commit": "2a6faa434493b5af1d21aebb73c520eb4c5f5d19",
+  "research_tree": "a91197f1b24f01afc4d23b0274edaa03f9dd245c",
+  "scope": "Independent Android sources and self-authored encoder; no raw private evidence or signing material",
+  "imports": {
+    ".gitignore": {
+      "research_path": "apps/open-roadsync/android/.gitignore",
+      "research_blob_sha256": "bc62dfe964fd899c6bedb1d60caf39c5c0d4a46b0cae403708377ded3fde9a73"
+    },
+    "README.md": {
+      "research_path": "apps/open-roadsync/android/README.md",
+      "research_blob_sha256": "b98c0b1eb0ae3a476b0d18fbd76e6ff31946d714037292a423d0068f3c156a93"
+    },
+    "app/build.gradle.kts": {
+      "research_path": "apps/open-roadsync/android/app/build.gradle.kts",
+      "research_blob_sha256": "1aa6ec6d8fd5bc547ffa782bb163ef9c9900a4fbde81e765e0d30b227895a92f"
+    },
+    "app/src/androidTest/AndroidManifest.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/AndroidManifest.xml",
+      "research_blob_sha256": "74db626eeae3292abb3aa45b04a18d2b6309f62b0c652654517f6d384937327f"
+    },
+    "app/src/androidTest/java/org/openridesync/app/AccountScreenTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/AccountScreenTest.kt",
+      "research_blob_sha256": "72fbb03c95f6612c0892fcbf0453dbd79ae4f224f734832dc391e0b0fd4c7f49"
+    },
+    "app/src/androidTest/java/org/openridesync/app/AppShellNavigationTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/AppShellNavigationTest.kt",
+      "research_blob_sha256": "14fad1126238f27bcb1734e9d21991c79506b2db86340163ace2087254c364af"
+    },
+    "app/src/androidTest/java/org/openridesync/app/AppShellScreenTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/AppShellScreenTest.kt",
+      "research_blob_sha256": "77f8e6fbe7936868554f5420844bece1ec2472c15d4c295501459673fa39b0c0"
+    },
+    "app/src/androidTest/java/org/openridesync/app/DiagnosticsDeviceTest.java": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/DiagnosticsDeviceTest.java",
+      "research_blob_sha256": "268101879f4e20b4e8697f434484c7eb4ef52d8c67d8e9b0c0079ce033bbe915"
+    },
+    "app/src/androidTest/java/org/openridesync/app/GarageVehicleCardTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/GarageVehicleCardTest.kt",
+      "research_blob_sha256": "244882be740f45260eec2c5d5b6f62186242a167b85677a550fb8399c9e3430b"
+    },
+    "app/src/androidTest/java/org/openridesync/app/OemVehicleMigrationTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/OemVehicleMigrationTest.kt",
+      "research_blob_sha256": "c131ff4df19bb1371265cbdef62e9d7f2046389f1cb75f2ab45fce0bb4d118f8"
+    },
+    "app/src/androidTest/java/org/openridesync/app/PairingScreenTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/PairingScreenTest.kt",
+      "research_blob_sha256": "cc0a0fd1744247a0ffaf7dcb825be8105069210163a4767e3d5df57ba7b4c87d"
+    },
+    "app/src/androidTest/java/org/openridesync/app/PermissionsScreenTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/PermissionsScreenTest.kt",
+      "research_blob_sha256": "6316455a1c23baab8419314932161ea1b25189f46cc584e33aa5f94d19e9ec4d"
+    },
+    "app/src/androidTest/java/org/openridesync/app/RideNavigationTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/RideNavigationTest.kt",
+      "research_blob_sha256": "bb947159076a757e4e02e21a4f8e5692b2ffd0252e70ae3978220dde647d46b6"
+    },
+    "app/src/androidTest/java/org/openridesync/app/RidePreviewScreenTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/RidePreviewScreenTest.kt",
+      "research_blob_sha256": "19fc56ae485e2e7bb05b7ed653836af8c0992790cd14e52f7ef9a68652f0c93f"
+    },
+    "app/src/androidTest/java/org/openridesync/app/RideScreenAwakeDeviceTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/RideScreenAwakeDeviceTest.kt",
+      "research_blob_sha256": "319a26cd77ccf4aea637d856ac4ba47f7b3a00fafda5ccd0b89a5483497d1898"
+    },
+    "app/src/androidTest/java/org/openridesync/app/RideScreenTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/RideScreenTest.kt",
+      "research_blob_sha256": "60ac33fe6b121dcba18bdfc1557aabdf8bdd5c276b5ea4bdc230989ddfc99839"
+    },
+    "app/src/androidTest/java/org/openridesync/app/RideStatusCardTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/RideStatusCardTest.kt",
+      "research_blob_sha256": "1edfd69e06b1c540e6f045a43d43d183b2b7fe739ae2817300b67d14bce59686"
+    },
+    "app/src/androidTest/java/org/openridesync/app/TripHistoryScreenTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/TripHistoryScreenTest.kt",
+      "research_blob_sha256": "9075513793cbe0e7ff2e19e7bfa883bfc1960cac56cb7121bd84fd5cc82f3a34"
+    },
+    "app/src/androidTest/java/org/openridesync/app/auth/AuthFailureMapperTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/auth/AuthFailureMapperTest.kt",
+      "research_blob_sha256": "1cfea628c24d4402e10769b298bf56596d4d63d2a5db7e0a5a6f17f0c0824597"
+    },
+    "app/src/androidTest/java/org/openridesync/app/auth/NativeNetworkProbeTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/auth/NativeNetworkProbeTest.kt",
+      "research_blob_sha256": "97492224cb2dea20c69d7d93c879b2fbee399ee626d5daaf121de33f323ef283"
+    },
+    "app/src/androidTest/java/org/openridesync/app/ble/BleKeyStoreTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/ble/BleKeyStoreTest.kt",
+      "research_blob_sha256": "be224b6ba876ed76d2e29c7fb7a1b12746f82fb1670d4cb21fd1be08dfae314d"
+    },
+    "app/src/androidTest/java/org/openridesync/app/ble/Gen1SecurityDeviceTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/ble/Gen1SecurityDeviceTest.kt",
+      "research_blob_sha256": "e123ba4024213887a3fd318c94e3db601d404893ed414f8f297b8ac6278494ba"
+    },
+    "app/src/androidTest/java/org/openridesync/app/calls/NativeCallsDeviceTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/calls/NativeCallsDeviceTest.kt",
+      "research_blob_sha256": "a7ee33aefcc46c7478f892ae6bb128e8d0829beaa49b117586ab113326a695a9"
+    },
+    "app/src/androidTest/java/org/openridesync/app/guides/GuideWebViewTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/guides/GuideWebViewTest.kt",
+      "research_blob_sha256": "587f9620b4e4de883cb115362ceafe03a70498971170f83218af7830195bb8b8"
+    },
+    "app/src/androidTest/java/org/openridesync/app/media/BrowserFixtureService.java": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/media/BrowserFixtureService.java",
+      "research_blob_sha256": "c60ea2e7bd6ea7d5e6cfd7a93f541b9d56cf2e5ce2db1173a5eb0176f480cdf3"
+    },
+    "app/src/androidTest/java/org/openridesync/app/media/BrowserMediaDeviceTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/media/BrowserMediaDeviceTest.kt",
+      "research_blob_sha256": "418d411adfb3f9d1c9b6de720b7555fad622f36f88c50950091ec2c3db9edff6"
+    },
+    "app/src/androidTest/java/org/openridesync/app/media/MediaScreenTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/media/MediaScreenTest.kt",
+      "research_blob_sha256": "018f2e1a435fbbb900e9497a7a5a88ce736a97e2e57ccd5e2a62a8f8dc8adbc9"
+    },
+    "app/src/androidTest/java/org/openridesync/app/media/NativeMediaDeviceTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/media/NativeMediaDeviceTest.kt",
+      "research_blob_sha256": "054868c34a3c4aaec8ba8b435a2293dbb6b80f07fd158f01ad82d054b92bc68a"
+    },
+    "app/src/androidTest/java/org/openridesync/app/media/SpotifyRideArtworkDeviceTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/media/SpotifyRideArtworkDeviceTest.kt",
+      "research_blob_sha256": "8df43ca6b7a115e3d14e5eedff1e1333a379a4d94e7970280a7d8a321139d57b"
+    },
+    "app/src/androidTest/java/org/openridesync/app/messages/NativeMessagesDeviceTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/messages/NativeMessagesDeviceTest.kt",
+      "research_blob_sha256": "54f0bc7be273ab09250f47461d08730ae64aa154a98931fc1a2d0e7e2b7e94dd"
+    },
+    "app/src/androidTest/java/org/openridesync/app/messages/RideReplyDeviceTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/messages/RideReplyDeviceTest.kt",
+      "research_blob_sha256": "26c360f1bd33241447483780df6e80d87cb1948c5372502183bf74f0f10db31b"
+    },
+    "app/src/androidTest/java/org/openridesync/app/navigation/GoogleMapsSupportedTemplatesDeviceTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/navigation/GoogleMapsSupportedTemplatesDeviceTest.kt",
+      "research_blob_sha256": "147c9d5ff20d48b22b06582da1a116dc96cc143e14886652e80914da0e902344"
+    },
+    "app/src/androidTest/java/org/openridesync/app/navigation/GoogleMapsTemplatesDeviceTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/navigation/GoogleMapsTemplatesDeviceTest.kt",
+      "research_blob_sha256": "74f55ba2deecfd1244831627838eaf26fa49da52e06af65958dd1ef4bc89c2de"
+    },
+    "app/src/androidTest/java/org/openridesync/app/runtime/RideStatusDeviceTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/runtime/RideStatusDeviceTest.kt",
+      "research_blob_sha256": "825ba96b85ca119f7878952570f917de825d1b5e73aa6206b4d04a9d151decd9"
+    },
+    "app/src/androidTest/java/org/openridesync/app/trips/TripJourneyScreenTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/trips/TripJourneyScreenTest.kt",
+      "research_blob_sha256": "7247a7d84b060946d925d32abd0139fc081b42f5e000b02d91114416b3090c84"
+    },
+    "app/src/androidTest/java/org/openridesync/app/trips/TripRecordingDeviceTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/trips/TripRecordingDeviceTest.kt",
+      "research_blob_sha256": "30e0dcae3e93b5e237e02d6e3b7cce8c450faac9e167fbff0d0d1c2d3f9da345"
+    },
+    "app/src/androidTest/java/org/openridesync/app/ui/ReplySettingsDeviceTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/ui/ReplySettingsDeviceTest.kt",
+      "research_blob_sha256": "cfe2b78ade882c8c728be6ff1f056dd52d2174921b11dc57506b378b4c9191d7"
+    },
+    "app/src/androidTest/java/org/openridesync/app/vehicles/VehicleJourneyScreenTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/vehicles/VehicleJourneyScreenTest.kt",
+      "research_blob_sha256": "a8b562878cf17e260109d339bfca513e3e7b3e40da9ca562f9e675f39bc37104"
+    },
+    "app/src/androidTest/java/org/openridesync/app/weather/WeatherScreenTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/androidTest/java/org/openridesync/app/weather/WeatherScreenTest.kt",
+      "research_blob_sha256": "daa110aeb04339020cd94d1b8548a37043eda748712146ef7e810bb03a53982a"
+    },
+    "app/src/debug/AndroidManifest.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/debug/AndroidManifest.xml",
+      "research_blob_sha256": "126ddfb9df2751d6419887eca28bff45516c21d03d67d0768d20b0d7277eb7df"
+    },
+    "app/src/debug/java/org/openridesync/app/calls/CallFixtureService.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/debug/java/org/openridesync/app/calls/CallFixtureService.kt",
+      "research_blob_sha256": "1ab3be753ca0cc29d96a8077d9ec98de793be349dbe1c2816f4c5ec4353516a3"
+    },
+    "app/src/main/AndroidManifest.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/AndroidManifest.xml",
+      "research_blob_sha256": "15bbda4b8402d53656838f48af03ff2c58cbc5832cd0926914654d6b2191090d"
+    },
+    "app/src/main/assets/openridesync-login.html": {
+      "research_path": "apps/open-roadsync/android/app/src/main/assets/openridesync-login.html",
+      "research_blob_sha256": "a1939dcc31cf7f9cb20e7f37da7a4fe4a0980bc218d510e3e03dc318f97fb45f"
+    },
+    "app/src/main/java/org/openridesync/app/AccountViewModel.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/AccountViewModel.kt",
+      "research_blob_sha256": "4830809a5655d0c3ccfc63fce00cd3fb8d466a7efa5e0404ece93da12264e8e1"
+    },
+    "app/src/main/java/org/openridesync/app/DiagnosticsViewModel.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/DiagnosticsViewModel.kt",
+      "research_blob_sha256": "ee088495b6ffd07cdff9665d790703e3cf2a1a55c5deae30f8c4aee812be6cde"
+    },
+    "app/src/main/java/org/openridesync/app/MainActivity.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/MainActivity.kt",
+      "research_blob_sha256": "53c9eb1382e558d9b03f112036de24bb1272ff50218b0b18c156ee825b7143aa"
+    },
+    "app/src/main/java/org/openridesync/app/OpenRideSyncApplication.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/OpenRideSyncApplication.kt",
+      "research_blob_sha256": "caca282d88ea15aee2954293990971f3053f2b3c4ecd50c2b47bfe2979597e12"
+    },
+    "app/src/main/java/org/openridesync/app/auth/AuthClientConfig.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/auth/AuthClientConfig.kt",
+      "research_blob_sha256": "1508644bb23ce1ac7b543203f2580de2cab5ffed94edf0979e4282ffc8dfb5b1"
+    },
+    "app/src/main/java/org/openridesync/app/auth/AuthSession.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/auth/AuthSession.kt",
+      "research_blob_sha256": "20ee612c2569d6717f3c8d6b90f8f4dab7877c11db10cd115223469f08fb84fd"
+    },
+    "app/src/main/java/org/openridesync/app/auth/BrowserAuthActivity.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/auth/BrowserAuthActivity.kt",
+      "research_blob_sha256": "08e3e8c5c42bfbd4d64840280829b7cb8cc6fd7e020022e017ae98b2964b4409"
+    },
+    "app/src/main/java/org/openridesync/app/auth/BrowserAuthViewModel.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/auth/BrowserAuthViewModel.kt",
+      "research_blob_sha256": "03f64d72427919e83ec6a44f1ae3d5738a17980f83872734fcb47fd65890e888"
+    },
+    "app/src/main/java/org/openridesync/app/ble/BleKeyStore.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ble/BleKeyStore.kt",
+      "research_blob_sha256": "e5b6833f1901632511254a854fe9999d231854274e1d6779680ec08e0f8dce05"
+    },
+    "app/src/main/java/org/openridesync/app/ble/BtuInformation.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ble/BtuInformation.kt",
+      "research_blob_sha256": "2218e47f91ffe51d345e6a11d31d5fa052fe161642e39a230b9bde5007b4b7ad"
+    },
+    "app/src/main/java/org/openridesync/app/ble/CurrentTimeData.java": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ble/CurrentTimeData.java",
+      "research_blob_sha256": "cde59947300bc0ba876ed786d6220b90a4f0d3c3a86b2b63d13e11b9c5292558"
+    },
+    "app/src/main/java/org/openridesync/app/ble/CurrentTimeServer.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ble/CurrentTimeServer.kt",
+      "research_blob_sha256": "b1da6fe7417ceb9839c017cf34c7b7c052b6753aaed6f74d38b4aa454e70453c"
+    },
+    "app/src/main/java/org/openridesync/app/ble/GattCancellation.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ble/GattCancellation.kt",
+      "research_blob_sha256": "81bb3967c6ed7429075eb0d79de9a2760ce2362e3571e4dba73fe0d3d7e7e2e6"
+    },
+    "app/src/main/java/org/openridesync/app/ble/GattNotificationQueue.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ble/GattNotificationQueue.kt",
+      "research_blob_sha256": "1d3dece4b8417cee52e60574f0e510bd6c1df3257c9cbb99c3d8f72a029c0c63"
+    },
+    "app/src/main/java/org/openridesync/app/ble/GattReceiptExchange.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ble/GattReceiptExchange.kt",
+      "research_blob_sha256": "8cd0af3621653bf7f668e9e3fec08cc5a7157f88149f67a948689dd14ff9ec11"
+    },
+    "app/src/main/java/org/openridesync/app/ble/GattSession.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ble/GattSession.kt",
+      "research_blob_sha256": "a06b6a639177007b5731ea3f91ace2714e87536fbfb1f88167ae13830f8d92ad"
+    },
+    "app/src/main/java/org/openridesync/app/ble/Gen1AssignmentExchange.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ble/Gen1AssignmentExchange.kt",
+      "research_blob_sha256": "7bc1e5f3ce8a7a432ae6842c7177c18f386b64a29c112c15512e5819b2b4c502"
+    },
+    "app/src/main/java/org/openridesync/app/ble/Gen1Assignments.java": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ble/Gen1Assignments.java",
+      "research_blob_sha256": "e4e01653d8368831dfe957309fac2ba20a0d3c8aafec044046adce548da1ca36"
+    },
+    "app/src/main/java/org/openridesync/app/ble/Gen1ControlExchange.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ble/Gen1ControlExchange.kt",
+      "research_blob_sha256": "e7afd14d5c4528956d89aaefe8a45b1cf920a62dee0ce11034cb5c060ea98052"
+    },
+    "app/src/main/java/org/openridesync/app/ble/Gen1ControlPoint.java": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ble/Gen1ControlPoint.java",
+      "research_blob_sha256": "f6494782f1e74890f99384f5c09bd794a03adf9f122b4176a9681a78b34df771"
+    },
+    "app/src/main/java/org/openridesync/app/ble/Gen1Handshake.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ble/Gen1Handshake.kt",
+      "research_blob_sha256": "93b0ee609adbfd82e05190c28be0b28f4dd97db81fc4f162927825aeb0ed335f"
+    },
+    "app/src/main/java/org/openridesync/app/ble/Gen1Input.java": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ble/Gen1Input.java",
+      "research_blob_sha256": "cb3679e68fcd82d5cdfab8c385b8e32ffec017344de012c31e1187004257720c"
+    },
+    "app/src/main/java/org/openridesync/app/ble/Gen1InputMonitor.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ble/Gen1InputMonitor.kt",
+      "research_blob_sha256": "7b66a8041855e6ab534bf44578579d9a5a1d41dd4d81d273b2ebf532ee16a7f3"
+    },
+    "app/src/main/java/org/openridesync/app/ble/Gen1Projection.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ble/Gen1Projection.kt",
+      "research_blob_sha256": "a0d481b00e94cf1b2e1b701f8e9be09e1d9672a52b19baaf388dcbdfb9993018"
+    },
+    "app/src/main/java/org/openridesync/app/ble/Gen1RuntimeConnection.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ble/Gen1RuntimeConnection.kt",
+      "research_blob_sha256": "fd4ddc18faaeb846e4d74d20da358d96186e8393cbcaa8f93ee617249172257e"
+    },
+    "app/src/main/java/org/openridesync/app/ble/Gen1Security.java": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ble/Gen1Security.java",
+      "research_blob_sha256": "9737eea5c2593f1cd70933343ae5723508c04b7e1b86551758d6592ac33afe90"
+    },
+    "app/src/main/java/org/openridesync/app/ble/Gen1Shutdown.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ble/Gen1Shutdown.kt",
+      "research_blob_sha256": "47a47fefc4087addc2aa01882424283a1901fa803c87589b81379fbdf00f70c6"
+    },
+    "app/src/main/java/org/openridesync/app/calls/CallProjection.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/calls/CallProjection.kt",
+      "research_blob_sha256": "7123e2399a79e458514a01e603167c5fd5c392d9a62416714321eb5572d447de"
+    },
+    "app/src/main/java/org/openridesync/app/calls/CallsScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/calls/CallsScreen.kt",
+      "research_blob_sha256": "5728bc14546efddab2e81988b6f2087afe89c37fd7209bd2cd1c61b4146de0fd"
+    },
+    "app/src/main/java/org/openridesync/app/calls/CallsViewModel.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/calls/CallsViewModel.kt",
+      "research_blob_sha256": "d2d58349479d18f66f839baf5fb56184e6694b728538005a0258a8bdaf67c113"
+    },
+    "app/src/main/java/org/openridesync/app/calls/NativeCalls.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/calls/NativeCalls.kt",
+      "research_blob_sha256": "9a783338f7a8ed56aeea1ac682d5dc16575d4b51c4dc1cfb1abbfe1a23ad612f"
+    },
+    "app/src/main/java/org/openridesync/app/guides/GuideDownload.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/guides/GuideDownload.kt",
+      "research_blob_sha256": "52bae96d1fcee0a1160a355d3d8e86ded900268260f27609d6442307bb1b39a5"
+    },
+    "app/src/main/java/org/openridesync/app/guides/GuideUrlPolicy.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/guides/GuideUrlPolicy.kt",
+      "research_blob_sha256": "3bf8012fa1c194df91360f7a27eeedcef072e63f69742375123ecf79bfbcf1f1"
+    },
+    "app/src/main/java/org/openridesync/app/guides/GuideWebView.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/guides/GuideWebView.kt",
+      "research_blob_sha256": "9692a70039783bb0daf4d4324c6de28aa080281d75605d0bbf8b35aed653b1b7"
+    },
+    "app/src/main/java/org/openridesync/app/guides/VehicleGuide.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/guides/VehicleGuide.kt",
+      "research_blob_sha256": "e1203fb5c599fd0865afaf5fdaf859dda122d17927b6f0583bafe9e213ae56a4"
+    },
+    "app/src/main/java/org/openridesync/app/guides/VehicleGuideScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/guides/VehicleGuideScreen.kt",
+      "research_blob_sha256": "80d03f3c3c30421cf5452b6e4761c5fcc8533d3557df527ac09e8acca5a6ea14"
+    },
+    "app/src/main/java/org/openridesync/app/honda/HondaSessionRead.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/honda/HondaSessionRead.kt",
+      "research_blob_sha256": "634b47fd4e3c06c1f9cc3cb125509d0971df2b29556b89098a6013a9c5c3c37a"
+    },
+    "app/src/main/java/org/openridesync/app/media/FavoriteMusic.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/media/FavoriteMusic.kt",
+      "research_blob_sha256": "b43690f1a02e034964ac44b2f678bc1f2a2caa7d72d9d14c8740a892f1566582"
+    },
+    "app/src/main/java/org/openridesync/app/media/FavoriteMusicScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/media/FavoriteMusicScreen.kt",
+      "research_blob_sha256": "a015b55d22c2bffd1768b7711248d0646d8dfc7bbeeb9afd35e3e48585a55a29"
+    },
+    "app/src/main/java/org/openridesync/app/media/FavoriteMusicStart.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/media/FavoriteMusicStart.kt",
+      "research_blob_sha256": "641ea4b847db50022086ec1e7a03b83d61499ca840de2d92ffecd873d08a6847"
+    },
+    "app/src/main/java/org/openridesync/app/media/FavoriteMusicViewModel.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/media/FavoriteMusicViewModel.kt",
+      "research_blob_sha256": "0be6e255e5d27cae96d3325e5d76377e7fd6b5c7df255aeb82044c516cb9f99c"
+    },
+    "app/src/main/java/org/openridesync/app/media/FavoriteSessionAcquisition.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/media/FavoriteSessionAcquisition.kt",
+      "research_blob_sha256": "c87c4b2b9405c4e81c429e0c9ae6ab992e29f3c95458a8d2252d99c1273a0aac"
+    },
+    "app/src/main/java/org/openridesync/app/media/FavoriteStartGate.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/media/FavoriteStartGate.kt",
+      "research_blob_sha256": "fe45084a09dd7f72c3b51e6cea571d5f592cc4f1e137ac08e4bb00d246500fa6"
+    },
+    "app/src/main/java/org/openridesync/app/media/FavoriteStartTestScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/media/FavoriteStartTestScreen.kt",
+      "research_blob_sha256": "01ed172577f03f90980dfa31b38a55522fbd0b531495ac6e6d6c678255d866bc"
+    },
+    "app/src/main/java/org/openridesync/app/media/MediaAccessService.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/media/MediaAccessService.kt",
+      "research_blob_sha256": "01078bace84d0733d478ea1754d85a588043c0b9e1e3b45f1498c31912c510f0"
+    },
+    "app/src/main/java/org/openridesync/app/media/MediaJourney.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/media/MediaJourney.kt",
+      "research_blob_sha256": "26e943792bba7af0f6811f01c7ebe18096bf58c86adcfe3b84bf69b26d33e6af"
+    },
+    "app/src/main/java/org/openridesync/app/media/MediaScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/media/MediaScreen.kt",
+      "research_blob_sha256": "7d910cb4202a63b6d5d3a9c4965f02cdc256895d8e2c1061cdecfaf26d464802"
+    },
+    "app/src/main/java/org/openridesync/app/media/MediaViewModel.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/media/MediaViewModel.kt",
+      "research_blob_sha256": "aa4ab702c9f1cd4f0a1a1c0de554c7e4a662f12c2dbaf4b4edda9e4a0e8ab5f1"
+    },
+    "app/src/main/java/org/openridesync/app/media/MusicProjection.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/media/MusicProjection.kt",
+      "research_blob_sha256": "0974e69c76de7723ea5f2579374bf388bc9edfc9990139fb467f1f5ddd4830b1"
+    },
+    "app/src/main/java/org/openridesync/app/media/NativeMedia.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/media/NativeMedia.kt",
+      "research_blob_sha256": "952253821b0cbbdfa1123f31661a374c99c965ba44304e5c022d12a92e2082ab"
+    },
+    "app/src/main/java/org/openridesync/app/messages/IncomingMessages.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/messages/IncomingMessages.kt",
+      "research_blob_sha256": "3fe043879db03001c7cd8f150cec4ce72eaaeb2e6e14688bae7d50eba8b682d2"
+    },
+    "app/src/main/java/org/openridesync/app/messages/MessageProjection.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/messages/MessageProjection.kt",
+      "research_blob_sha256": "fdfa30899062aecc9a328ee931da2412f6d817be340845059276111fcc3e5542"
+    },
+    "app/src/main/java/org/openridesync/app/messages/MessageRecoveryStore.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/messages/MessageRecoveryStore.kt",
+      "research_blob_sha256": "254ed2f4b9456b5e745cf09e6dc15eeeb2834761d0dd7438ee0bf67d65127063"
+    },
+    "app/src/main/java/org/openridesync/app/messages/MessagesScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/messages/MessagesScreen.kt",
+      "research_blob_sha256": "235d589cf72009cd044d0f4da5f63ccc80c91139d05431107ab7081788918e2f"
+    },
+    "app/src/main/java/org/openridesync/app/messages/MessagesViewModel.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/messages/MessagesViewModel.kt",
+      "research_blob_sha256": "c497f2c7d4dd57d288e635c37fe2df904166fca02533fb2ead8770bbf7909d6b"
+    },
+    "app/src/main/java/org/openridesync/app/messages/NativeMessages.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/messages/NativeMessages.kt",
+      "research_blob_sha256": "dfbe146bddb9d51a747df48933004e797c6d6e528a0a7fc82e99ca5f8bf654d6"
+    },
+    "app/src/main/java/org/openridesync/app/navigation/AppRoutes.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/navigation/AppRoutes.kt",
+      "research_blob_sha256": "e8aad27c455708d0101deacac605d6a3271f912f8be990cae08badcf3fd15931"
+    },
+    "app/src/main/java/org/openridesync/app/navigation/GoogleMapsManeuvers.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/navigation/GoogleMapsManeuvers.kt",
+      "research_blob_sha256": "96fcbdb9a2583b1d8f9ba19585e04bee514946ed449560e94042e5153546cfd1"
+    },
+    "app/src/main/java/org/openridesync/app/navigation/MainTabs.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/navigation/MainTabs.kt",
+      "research_blob_sha256": "7a1f4309f67fae03b5005af838434a94c15d6de2b5b228e229262d3d6ba6c8b1"
+    },
+    "app/src/main/java/org/openridesync/app/navigation/MapsDestination.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/navigation/MapsDestination.kt",
+      "research_blob_sha256": "982a28f86a9c45f3399cd2fdf8e4881445f185aac6b4b17504e9be9328f5a7f3"
+    },
+    "app/src/main/java/org/openridesync/app/navigation/MapsNotification.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/navigation/MapsNotification.kt",
+      "research_blob_sha256": "97ee088503f469b926a16ff46c57b228150950a001876419c6f106b1c47151c8"
+    },
+    "app/src/main/java/org/openridesync/app/navigation/NativeNavigation.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/navigation/NativeNavigation.kt",
+      "research_blob_sha256": "9031e83b6e99fc866c891ac3a510c37860453f5114cf0ed1893a8bb55d9c0b79"
+    },
+    "app/src/main/java/org/openridesync/app/navigation/NavigationObservationScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/navigation/NavigationObservationScreen.kt",
+      "research_blob_sha256": "71939c497a6d25ab3a1788b1a33887f656f921d2301f1a0a79cdef43b995db43"
+    },
+    "app/src/main/java/org/openridesync/app/navigation/NavigationPreview.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/navigation/NavigationPreview.kt",
+      "research_blob_sha256": "0954ace4c2b3abb98e62157924279c4b0296ab5dd509f37b8239c327769283c8"
+    },
+    "app/src/main/java/org/openridesync/app/navigation/NavigationProjection.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/navigation/NavigationProjection.kt",
+      "research_blob_sha256": "c2cc957602eaab087880283c4883fae969a9c805f1c121b166e88a532b33020f"
+    },
+    "app/src/main/java/org/openridesync/app/navigation/NavigationScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/navigation/NavigationScreen.kt",
+      "research_blob_sha256": "8475e00766867adab7676f07d7807093928c789e8ed6eaa6725f5990a5ec5cbd"
+    },
+    "app/src/main/java/org/openridesync/app/navigation/NavigationViewModel.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/navigation/NavigationViewModel.kt",
+      "research_blob_sha256": "e8aeec8af76a893ba8eb1b7849a67c4bb31b218020cd62a25417ebb8cf6f122b"
+    },
+    "app/src/main/java/org/openridesync/app/pairing/CompanionChoice.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/pairing/CompanionChoice.kt",
+      "research_blob_sha256": "540df06b4a4450c8a582ab2cd3c68224e2120f4b65b8b7586fb8259157e3ff73"
+    },
+    "app/src/main/java/org/openridesync/app/pairing/PairingBluetooth.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/pairing/PairingBluetooth.kt",
+      "research_blob_sha256": "9b24eafd669ba4861fbb7e3c15a3d0f81aac424a3844cbdf360c5f15ba7d5b82"
+    },
+    "app/src/main/java/org/openridesync/app/pairing/PairingScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/pairing/PairingScreen.kt",
+      "research_blob_sha256": "c0df9e594aca6a82eb1c7ddaef31d94403d50e99007f1145d5e7e41214921db4"
+    },
+    "app/src/main/java/org/openridesync/app/pairing/PairingViewModel.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/pairing/PairingViewModel.kt",
+      "research_blob_sha256": "dba8288a62b43ad129c0eb07e121857deafd2d47881fc085fddb0a16c2a64ed5"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/DashboardCustomizationScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/DashboardCustomizationScreen.kt",
+      "research_blob_sha256": "aefc8ee6cbab83acb5e7e110961205822099ac87a681926e1bbe6bc88a729db5"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/HandlebarTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/HandlebarTest.kt",
+      "research_blob_sha256": "d57b2e3a27357faf1cd3234b3fc87a416d873086a1b825b9405ec38f191e3322"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/HandlebarTestScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/HandlebarTestScreen.kt",
+      "research_blob_sha256": "fe6ec190a80e727874a23b0f18dadf2cf20d8bac0df04afc1b3c5fed324a6c2a"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/MainMenuSelection.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/MainMenuSelection.kt",
+      "research_blob_sha256": "3eb3f237675fb7a16677917ac2238c2136135d4c3dd99bbeb07b6e7309c5dd03"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/QuickReplyPreferences.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/QuickReplyPreferences.kt",
+      "research_blob_sha256": "d87ffad97d13e56bab231678a6063b0c467da277fe79cdd6f0e88c8638e13b42"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RecognitionLanguages.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RecognitionLanguages.kt",
+      "research_blob_sha256": "e4aaced7b010a8623124ac26af36be5b042ca2f78955ffc0071b253aebac62a1"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RideCallContext.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RideCallContext.kt",
+      "research_blob_sha256": "a1c6337b77969c1396ce49205f0b8f93d559501b9c59f1feb6ef5fdb6ab05664"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RideConnection.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RideConnection.kt",
+      "research_blob_sha256": "9838af604c8c950cb21748edfd4157868c04b4236456be97e7a5db9ed4109bb0"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RideControls.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RideControls.kt",
+      "research_blob_sha256": "cdb653f0ea383e0439817466ba3e23e137856d55e5ba2d57198eaaf738205a34"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RideDeviceStatus.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RideDeviceStatus.kt",
+      "research_blob_sha256": "17508d2c27ee4882402ca930edaed36b24537bcf03ea360a3651c49d8806c32c"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RideIndicators.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RideIndicators.kt",
+      "research_blob_sha256": "ac31428b408cb5a1b867a1b8cc31f644b69c94025169d3ef5f373fb1e8db4324"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RideMessageReply.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RideMessageReply.kt",
+      "research_blob_sha256": "821e3c7ca7fa70f25592e861587d9b64411ce59810fde37afe0c4cef0cbf2253"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RideModeSwitch.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RideModeSwitch.kt",
+      "research_blob_sha256": "a5ede1a2024459a2017a82454550f0b3baaf6a60a039382792316be30923533e"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RidePageActions.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RidePageActions.kt",
+      "research_blob_sha256": "348b8e88c0537d0f443cbc6e30a1e9a168f1ce14da75ece824309d9ae747d8ec"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RidePages.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RidePages.kt",
+      "research_blob_sha256": "10c3ec55b1a24abdecd573820bb4dbaffd9ae8a1abeb5a0694bbdc4d6733e10d"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RidePhoneContent.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RidePhoneContent.kt",
+      "research_blob_sha256": "5c3c981e4bc90bfa6032fc1cc91012ab4654abde8eb0bf3c52bc653f44d3d98e"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RidePopups.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RidePopups.kt",
+      "research_blob_sha256": "1d0d40de3cc4110dd4c47a3cf3319b556143550a1551e7b1a815a25cda305acc"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RidePreferences.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RidePreferences.kt",
+      "research_blob_sha256": "5f1ddaca45efdfeac421ffa33aa2b293c8618b936bc1f82dec4ad92c221dcc80"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RidePreviewScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RidePreviewScreen.kt",
+      "research_blob_sha256": "74c59654edbc23cd95a52e7846f3337c2c3b17e630856d0cd37f228f25c2bbd1"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RideRecognition.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RideRecognition.kt",
+      "research_blob_sha256": "7eaa1fef8b4b5858b5bc020f1e7a9362a2055d814f458a709322f5cf362969e5"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RideRecovery.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RideRecovery.kt",
+      "research_blob_sha256": "b7ce0c069e4c001047c205c96480f8c68079fa7a161229d092f29eb15dd165b0"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RideRidingMenu.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RideRidingMenu.kt",
+      "research_blob_sha256": "721a8d3b97b8b9ee5f3e6e5507a47f2550a402c39c57f101fa9d2bcfefe4f206"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RideScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RideScreen.kt",
+      "research_blob_sha256": "7048a3ecc538ff52e8898c4b870bed145e7b9c7dd4ff809a857bc587eda63a08"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RideScreenAwake.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RideScreenAwake.kt",
+      "research_blob_sha256": "e5022c537fa9b9bc8aca4132008e1acff17b84171ad0f00e57c1de72796b0ead"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RideService.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RideService.kt",
+      "research_blob_sha256": "1314f46cf184e245741079ba053fd0f81e27a1292db912b317fdee4deb67af01"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RideSpeech.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RideSpeech.kt",
+      "research_blob_sha256": "0b33ac5bcd87908617ba7a67f60d2c2caff1982706bb46721fa28dbfd6339459"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RideStartup.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RideStartup.kt",
+      "research_blob_sha256": "b5a061ff03e8840ddbff745f159907cb8e210003ab57ee9dfd633162d57268d3"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RideStatusBar.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RideStatusBar.kt",
+      "research_blob_sha256": "5ae4acd86cff2b406bd3d69bf65f046c0c2dd360bdb3891a8dfdded2369fa366"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RideStatusReport.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RideStatusReport.kt",
+      "research_blob_sha256": "91dda7c7bcbb5c0a29be0176d600b970898d0bb840f13b04dd3cda7bb6bda216"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RideViewModel.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RideViewModel.kt",
+      "research_blob_sha256": "f1e1cd2a701c329791e862021a4b5f2619b41ddae5c537f84fd5c1b4a06bd538"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/RideVolume.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/RideVolume.kt",
+      "research_blob_sha256": "ce98b27cee2284a5869a1c75747dd87807f205b5f900e623f7ece7eec7e19c0d"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/VehicleOperationGate.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/VehicleOperationGate.kt",
+      "research_blob_sha256": "41c872d7f23b727e61ff4692cfa8cec168bb2246f25aece7d3d426da53f569eb"
+    },
+    "app/src/main/java/org/openridesync/app/runtime/VolumeProjection.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/runtime/VolumeProjection.kt",
+      "research_blob_sha256": "64ff2f7db83befd3b59f215fe43d1435d9d8bc15a02766ec94638badd4222c93"
+    },
+    "app/src/main/java/org/openridesync/app/trips/TripFormat.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/trips/TripFormat.kt",
+      "research_blob_sha256": "8c035c2ee95de9b11bc71d6673486cde32cb9a47bad9bfbe5cec29ba6cc42c4a"
+    },
+    "app/src/main/java/org/openridesync/app/trips/TripHistoryScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/trips/TripHistoryScreen.kt",
+      "research_blob_sha256": "a0cbfb0f17b9d10e0f4dbcf1fac3d9e8bc428a0cad39eba0a1815904aa3d3d38"
+    },
+    "app/src/main/java/org/openridesync/app/trips/TripJourney.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/trips/TripJourney.kt",
+      "research_blob_sha256": "b4b0a744935074b645a81e1831d283fa783a5eda89b2e0ac2d6eb9e01eae6ec4"
+    },
+    "app/src/main/java/org/openridesync/app/trips/TripPointStore.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/trips/TripPointStore.kt",
+      "research_blob_sha256": "ae11e00ca865abab60558fa2554dbabb7ebf67d511a64c1c7e90a127e7f16b38"
+    },
+    "app/src/main/java/org/openridesync/app/trips/TripRecording.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/trips/TripRecording.kt",
+      "research_blob_sha256": "03d2ce42c1c3426d26f552a1e99f2b588d89a301edaf35bb6c996013c1f6ed32"
+    },
+    "app/src/main/java/org/openridesync/app/trips/TripRecordingEnvironment.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/trips/TripRecordingEnvironment.kt",
+      "research_blob_sha256": "ba57678dd9b8a2f6636e313a59c551e2f1f3641ade2b293d6ebb6f86b9efd3da"
+    },
+    "app/src/main/java/org/openridesync/app/trips/TripRecordingScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/trips/TripRecordingScreen.kt",
+      "research_blob_sha256": "9905c55fff84462b890fc2c8dd57905e75918e3901189c7d52cff8e61aab638f"
+    },
+    "app/src/main/java/org/openridesync/app/trips/TripRoute.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/trips/TripRoute.kt",
+      "research_blob_sha256": "c72705227e351930c61c8dd660d8c5f6d226de6992620f6f03777021e16c3a52"
+    },
+    "app/src/main/java/org/openridesync/app/trips/TripRules.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/trips/TripRules.kt",
+      "research_blob_sha256": "34cd6263e46ccc284ac55e36617010c8357dfed3ed77cdcc340ddbeff1760439"
+    },
+    "app/src/main/java/org/openridesync/app/trips/TripUploadJobService.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/trips/TripUploadJobService.kt",
+      "research_blob_sha256": "30f2d675488cd598fb94d5eaf3b7f23f0cfa869c3c17536fabd090c109e609d9"
+    },
+    "app/src/main/java/org/openridesync/app/trips/TripViewModel.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/trips/TripViewModel.kt",
+      "research_blob_sha256": "df37cb69e334530ab8a675ccaa1e47429d3b47771551fbcb1937a9a6b4252c4b"
+    },
+    "app/src/main/java/org/openridesync/app/ui/AccountScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ui/AccountScreen.kt",
+      "research_blob_sha256": "1ee24bf9c87663618ec467be63c31435410cbdf96872ee867904bfa31402e67c"
+    },
+    "app/src/main/java/org/openridesync/app/ui/AppShellScreens.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ui/AppShellScreens.kt",
+      "research_blob_sha256": "ba9c30884b9c8c86d355415f616b193b742481518593216c5c71471dd4944482"
+    },
+    "app/src/main/java/org/openridesync/app/ui/CustomizationEntryScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ui/CustomizationEntryScreen.kt",
+      "research_blob_sha256": "a64c0fd014185be6e1723aac2d23f69b78984248d0040dff7da58c852d898c0a"
+    },
+    "app/src/main/java/org/openridesync/app/ui/DiagnosticsScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ui/DiagnosticsScreen.kt",
+      "research_blob_sha256": "599757a4566c0cfb81d77b32fbb0dd3790a426b84e053d1a63f01d5c203ebb86"
+    },
+    "app/src/main/java/org/openridesync/app/ui/HomeObservationLifecycle.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ui/HomeObservationLifecycle.kt",
+      "research_blob_sha256": "88ad45f3b33c05029b529dca8d01fcd59d2a473e194501ac55e2f647e4998b46"
+    },
+    "app/src/main/java/org/openridesync/app/ui/HomeOverview.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ui/HomeOverview.kt",
+      "research_blob_sha256": "627f61c087e4d58f45a67aabeafec651b54597963272f661ea105aab84265207"
+    },
+    "app/src/main/java/org/openridesync/app/ui/HomeOverviewRoute.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ui/HomeOverviewRoute.kt",
+      "research_blob_sha256": "8091601a5b48b7da60f23be6db1bb6c7d67333539750001fc612ee23e3eabef7"
+    },
+    "app/src/main/java/org/openridesync/app/ui/HomeOverviewScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ui/HomeOverviewScreen.kt",
+      "research_blob_sha256": "b27d90d3f517db60414ae02c6be50da581224224f6dac609b4274c9833601781"
+    },
+    "app/src/main/java/org/openridesync/app/ui/MainTabShell.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ui/MainTabShell.kt",
+      "research_blob_sha256": "a726c95fcb477496f9e3a1d35080779349d56cb95780eb17020a3dfa96ccf47d"
+    },
+    "app/src/main/java/org/openridesync/app/ui/OemUiAssets.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ui/OemUiAssets.kt",
+      "research_blob_sha256": "8716ed0548bbd466131dd93d950957c681968bfd736de2b5dc2cbd2859d6715e"
+    },
+    "app/src/main/java/org/openridesync/app/ui/PermissionsScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ui/PermissionsScreen.kt",
+      "research_blob_sha256": "ece852082770bd62f00ea65cd0f856e0006ce7adf6bef694a2ed8f47f18e8f66"
+    },
+    "app/src/main/java/org/openridesync/app/ui/QuickReplySettingsScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ui/QuickReplySettingsScreen.kt",
+      "research_blob_sha256": "4ac0d482cfe1b661f6f267f631edc00a2edf8bff805fd46baa983a22b152fa76"
+    },
+    "app/src/main/java/org/openridesync/app/ui/RecognitionLanguageScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ui/RecognitionLanguageScreen.kt",
+      "research_blob_sha256": "92954617530dc845790c3aaf9368abe5d8f605632a9bd6f70491e2e421230d22"
+    },
+    "app/src/main/java/org/openridesync/app/ui/SettingsHub.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ui/SettingsHub.kt",
+      "research_blob_sha256": "d5cb41517bfc8ed0f65a9983eea633e081ef7e50538d7757b2d892cdcc11c427"
+    },
+    "app/src/main/java/org/openridesync/app/ui/theme/AppearancePreferences.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ui/theme/AppearancePreferences.kt",
+      "research_blob_sha256": "5210a70606563de3b0d90ae00490c3f3712bacfda30f1a015bad55f796836406"
+    },
+    "app/src/main/java/org/openridesync/app/ui/theme/AppearanceSystemBars.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ui/theme/AppearanceSystemBars.kt",
+      "research_blob_sha256": "4337e22f2843a0e0bbed7cd0cae803fb85723377a52a960e3f8e6e16958feb41"
+    },
+    "app/src/main/java/org/openridesync/app/ui/theme/OpenRideSyncTheme.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/ui/theme/OpenRideSyncTheme.kt",
+      "research_blob_sha256": "3dcf7c8510f566f20e7538419d8b3d5cb3c7c1387f5ec5a57557087e27983fef"
+    },
+    "app/src/main/java/org/openridesync/app/vehicles/GarageLayout.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/vehicles/GarageLayout.kt",
+      "research_blob_sha256": "ea29414537fc7690ab8e6ca9ca876758ddf0ef37e9c11c586e599f253a8334b4"
+    },
+    "app/src/main/java/org/openridesync/app/vehicles/GarageMutation.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/vehicles/GarageMutation.kt",
+      "research_blob_sha256": "e7c4309b5e462b64789f5932a9fd0e6fb51f1869aae5df7fa97bfd25c5303e9e"
+    },
+    "app/src/main/java/org/openridesync/app/vehicles/GarageVehicleContent.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/vehicles/GarageVehicleContent.kt",
+      "research_blob_sha256": "33bda8ba1637ccfe154f72443c457e094d83891dce7eaa19c4083143c2931d59"
+    },
+    "app/src/main/java/org/openridesync/app/vehicles/VehicleCatalogScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/vehicles/VehicleCatalogScreen.kt",
+      "research_blob_sha256": "4c7691c42dd14ac557fdebc243823663b60e36e7dbf4bd79b04b326f460e87a4"
+    },
+    "app/src/main/java/org/openridesync/app/vehicles/VehicleImage.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/vehicles/VehicleImage.kt",
+      "research_blob_sha256": "fc8c70fccc384083708fc2ad322de7e189357bea30fd8c1a6979bc4a67f9d678"
+    },
+    "app/src/main/java/org/openridesync/app/vehicles/VehicleImageCache.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/vehicles/VehicleImageCache.kt",
+      "research_blob_sha256": "6faf91b80e0361cfc4776989dd59058c7740c19490bcbd14dab15ea209a47f22"
+    },
+    "app/src/main/java/org/openridesync/app/vehicles/VehicleImageRequests.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/vehicles/VehicleImageRequests.kt",
+      "research_blob_sha256": "6c712b75b5efccbf9d1a3c5d5b972cc14afcfb4c0d79d10afbf389e054b6fbc7"
+    },
+    "app/src/main/java/org/openridesync/app/vehicles/VehicleJourney.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/vehicles/VehicleJourney.kt",
+      "research_blob_sha256": "efe5069bed476f1758ca6b2cd3a6635cc54bf60964059618f9f90e27f734a685"
+    },
+    "app/src/main/java/org/openridesync/app/vehicles/VehicleViewModel.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/vehicles/VehicleViewModel.kt",
+      "research_blob_sha256": "69723bfba3e540a98a4167ab0bf3a91b37bfdaa8e165371425abb27cfe80f8cc"
+    },
+    "app/src/main/java/org/openridesync/app/weather/HomeWeather.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/weather/HomeWeather.kt",
+      "research_blob_sha256": "385dc4c0abd4af62f5aa4c92c71a4f7b9e81b4b3d4c9e4d98bef0dd139ed9ddb"
+    },
+    "app/src/main/java/org/openridesync/app/weather/HomeWeatherJobService.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/weather/HomeWeatherJobService.kt",
+      "research_blob_sha256": "78027f61359877945a06fd697b889fdd83662840f84e361c157993c770ab417d"
+    },
+    "app/src/main/java/org/openridesync/app/weather/HomeWeatherStore.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/weather/HomeWeatherStore.kt",
+      "research_blob_sha256": "e8e28845d7af9e10daff39e7c5908948e3b727ac0019b71a91d0ad03310b18ce"
+    },
+    "app/src/main/java/org/openridesync/app/weather/RideWeather.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/weather/RideWeather.kt",
+      "research_blob_sha256": "18c2d5b22d81b8e41ea6af7a8feff9fcbedebf874a7603a65f7bd129d6ed4371"
+    },
+    "app/src/main/java/org/openridesync/app/weather/WeatherData.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/weather/WeatherData.kt",
+      "research_blob_sha256": "9b2cd8e38e0ad47fb3c5b3eb71cab1ea466f446ce3ae4dbe437f9ddab4f08f26"
+    },
+    "app/src/main/java/org/openridesync/app/weather/WeatherEnvironment.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/weather/WeatherEnvironment.kt",
+      "research_blob_sha256": "11de3fbcbafbd358f62a5dd7d8e45f9bbfca058f0a2cc9a27fc778adce5a0d95"
+    },
+    "app/src/main/java/org/openridesync/app/weather/WeatherFailure.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/weather/WeatherFailure.kt",
+      "research_blob_sha256": "15f73b3a15dcdbe373d1e0347751d130f5d5e2776fdb0a7263cb2f68197d7449"
+    },
+    "app/src/main/java/org/openridesync/app/weather/WeatherLifecycle.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/weather/WeatherLifecycle.kt",
+      "research_blob_sha256": "10f6cd1da4db5a38e5b1cf3d59a0f4434c5016740fc2166e2657f85a9ba6ca4c"
+    },
+    "app/src/main/java/org/openridesync/app/weather/WeatherLocation.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/weather/WeatherLocation.kt",
+      "research_blob_sha256": "badc19fb0c4d0775c0173d7ceda86f0842f4e096625c4408e1286034e126d494"
+    },
+    "app/src/main/java/org/openridesync/app/weather/WeatherLocationData.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/weather/WeatherLocationData.kt",
+      "research_blob_sha256": "c214723b237492fcbff20652c785b11b0ccd7d6ea348bfb26b387457af11b7a7"
+    },
+    "app/src/main/java/org/openridesync/app/weather/WeatherProjection.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/weather/WeatherProjection.kt",
+      "research_blob_sha256": "4a8964ef7aa4cb9cc4977ff4ab521983fd62703124df43c556445b2f73bd3001"
+    },
+    "app/src/main/java/org/openridesync/app/weather/WeatherReportTestScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/weather/WeatherReportTestScreen.kt",
+      "research_blob_sha256": "cccb0fd1598a4bb0dd1d53006511f24cfed0a6c8357cb7106b2ee057032210b7"
+    },
+    "app/src/main/java/org/openridesync/app/weather/WeatherRequestGate.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/weather/WeatherRequestGate.kt",
+      "research_blob_sha256": "d0c586ea606a1f8c928e2fcdb2fb3c14a2e7631e323d9064dfc9dd2ce827581c"
+    },
+    "app/src/main/java/org/openridesync/app/weather/WeatherScreen.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/weather/WeatherScreen.kt",
+      "research_blob_sha256": "328350983cb53a106557e1f1d3984edeb9416e2c60c65a4db7d51cd6a7d5a84b"
+    },
+    "app/src/main/java/org/openridesync/app/weather/WeatherSpeech.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/weather/WeatherSpeech.kt",
+      "research_blob_sha256": "bccb8afccde879657f08588dbe6b8b74ce4aec51ac505c7122f48df2d91baf37"
+    },
+    "app/src/main/java/org/openridesync/app/weather/WeatherViewModel.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/main/java/org/openridesync/app/weather/WeatherViewModel.kt",
+      "research_blob_sha256": "7644094a5eab2c538bb11e2866d941fb94d3c477ce12995fb624b0b633456b8e"
+    },
+    "app/src/main/res/drawable/ic_launcher_foreground.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/drawable/ic_launcher_foreground.xml",
+      "research_blob_sha256": "94f4ca85ac40096875817055675e6f5400534e44548b7ca033f63f9a869bc0e9"
+    },
+    "app/src/main/res/mipmap-anydpi-v33/ic_launcher.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/mipmap-anydpi-v33/ic_launcher.xml",
+      "research_blob_sha256": "12856628d52f96190795feb84fe4d32ee8b371c67ebb1ac3c6c25c2af05d3595"
+    },
+    "app/src/main/res/mipmap-anydpi/ic_launcher.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/mipmap-anydpi/ic_launcher.xml",
+      "research_blob_sha256": "d0b7050d918713b6bd1598265d44b6553aecc667db9be269c11c75b61521ca75"
+    },
+    "app/src/main/res/values-zh-rTW/quick_reply_strings.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values-zh-rTW/quick_reply_strings.xml",
+      "research_blob_sha256": "1a50a35c719ac19b6dcd1ad207d3a340186afeb756773c05010837ae2cf42218"
+    },
+    "app/src/main/res/values-zh-rTW/recognition_language_strings.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values-zh-rTW/recognition_language_strings.xml",
+      "research_blob_sha256": "fec67564866c0a723f9335ab134b813b4b9091d6550e4f5222e611cbc1c5e94e"
+    },
+    "app/src/main/res/values-zh-rTW/ride_call_strings.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values-zh-rTW/ride_call_strings.xml",
+      "research_blob_sha256": "fcb2b0becb0c6461e4274af7610a4622d03aa827a34dfbd7bceec6526be09ca9"
+    },
+    "app/src/main/res/values-zh-rTW/ride_message_strings.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values-zh-rTW/ride_message_strings.xml",
+      "research_blob_sha256": "d9f50fc2f033ac0e3554690697a544c7917a31c88f89df916e795b88ec9d08de"
+    },
+    "app/src/main/res/values-zh-rTW/ride_navigation_strings.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values-zh-rTW/ride_navigation_strings.xml",
+      "research_blob_sha256": "c2de704f22ccb87df7466715089f17a46434a21c1861399b1474e361f84c0e09"
+    },
+    "app/src/main/res/values-zh-rTW/ride_status_strings.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values-zh-rTW/ride_status_strings.xml",
+      "research_blob_sha256": "0d0fdce445637f4a586a3d72a93ed5b045b1c2cc1e00e2f3dcd63ffab1e983b4"
+    },
+    "app/src/main/res/values-zh-rTW/ride_strings.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values-zh-rTW/ride_strings.xml",
+      "research_blob_sha256": "7419d8c66576b47295f0903410adb96ad3d1b74b3085fc17e97a0ed9e3bfbbdc"
+    },
+    "app/src/main/res/values-zh-rTW/ride_weather_strings.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values-zh-rTW/ride_weather_strings.xml",
+      "research_blob_sha256": "f331ca9bf614e0ace0c3359d809a69276005eaeaca57c3544425a019ae4e3399"
+    },
+    "app/src/main/res/values-zh-rTW/startup_strings.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values-zh-rTW/startup_strings.xml",
+      "research_blob_sha256": "ce554981aea13dad9ddcadc5163ccb02032c6fab1c3349a549dd659df2e3fabd"
+    },
+    "app/src/main/res/values-zh-rTW/weather_report_strings.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values-zh-rTW/weather_report_strings.xml",
+      "research_blob_sha256": "cec6f3637cedd5cf293e441e8e6c48e1baa17b7989a701f18ab457c24d02ec60"
+    },
+    "app/src/main/res/values/launcher_colors.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values/launcher_colors.xml",
+      "research_blob_sha256": "17884735360600cece0a024a43263141367ff1b76bee3f3b82f227b211d57125"
+    },
+    "app/src/main/res/values/quick_reply_strings.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values/quick_reply_strings.xml",
+      "research_blob_sha256": "e08b28489b48813756efa0a12d444780794fa1fd237df0d6f1c2e36237d1872b"
+    },
+    "app/src/main/res/values/recognition_language_strings.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values/recognition_language_strings.xml",
+      "research_blob_sha256": "1ffef919b56059a3d97dc50ca718d581a474b78bad61fe96d970046e17690757"
+    },
+    "app/src/main/res/values/ride_call_strings.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values/ride_call_strings.xml",
+      "research_blob_sha256": "996e3052b5caf1b39b64371e4b6159fe546ee2a04b7ccd4b6a4960b49cf4e995"
+    },
+    "app/src/main/res/values/ride_message_strings.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values/ride_message_strings.xml",
+      "research_blob_sha256": "c80ce98b713e00b9f2e1e16b6f690ca8ee45f6632ab0ff68f014ae546af9cee5"
+    },
+    "app/src/main/res/values/ride_navigation_strings.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values/ride_navigation_strings.xml",
+      "research_blob_sha256": "02e015d5e29d467d0f6ddb07975b72d163a5048b0934f7f615f395c58e07b324"
+    },
+    "app/src/main/res/values/ride_status_strings.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values/ride_status_strings.xml",
+      "research_blob_sha256": "feb02778552e8a1ade82131369681959d3774daf881497f5bc0e6d62ca959d9f"
+    },
+    "app/src/main/res/values/ride_strings.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values/ride_strings.xml",
+      "research_blob_sha256": "7af37ae049e18860a566dde77323e72cb76341ac3da2f9bd7fb3329acd614959"
+    },
+    "app/src/main/res/values/ride_weather_strings.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values/ride_weather_strings.xml",
+      "research_blob_sha256": "835dfb93f906516b7392871a1a810d23ca1fff90ab746bace237f7dfb0c0b23f"
+    },
+    "app/src/main/res/values/startup_strings.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values/startup_strings.xml",
+      "research_blob_sha256": "be5ee8ad76fdccea0f294b7507e4f6c66e528a4d5612e6fdf990f9c155d2945e"
+    },
+    "app/src/main/res/values/styles.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values/styles.xml",
+      "research_blob_sha256": "f17fd5165caf1b3e88e2a8497a52f2b5adc5691fd2da1d66ced90bc66374660a"
+    },
+    "app/src/main/res/values/weather_report_strings.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/values/weather_report_strings.xml",
+      "research_blob_sha256": "927f43c2fd17a8bda936c0e3871065bf7a21b34aaed5e04636a459bf00d375d1"
+    },
+    "app/src/main/res/xml/data_extraction_rules.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/xml/data_extraction_rules.xml",
+      "research_blob_sha256": "eda9dddce1e895de1efd716fe75e244187bf8f91a3bb7444c6ea1731e51c74a8"
+    },
+    "app/src/main/res/xml/network_security_config.xml": {
+      "research_path": "apps/open-roadsync/android/app/src/main/res/xml/network_security_config.xml",
+      "research_blob_sha256": "5a9374078edd678a7fa598bf124ec369db16217667e26f6f10d9a6de2880e85c"
+    },
+    "app/src/test/java/org/openridesync/app/AccountStateTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/AccountStateTest.kt",
+      "research_blob_sha256": "f5e5394ada6ba95aee0cd626ec65a91b5192082b0366943ab9b75c38015da2ae"
+    },
+    "app/src/test/java/org/openridesync/app/AuthStateTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/AuthStateTest.kt",
+      "research_blob_sha256": "5946d47422c08c31cc61db0e8678169281d98ce21d7c96c6a12a78a256820292"
+    },
+    "app/src/test/java/org/openridesync/app/DiagnosticsViewModelTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/DiagnosticsViewModelTest.kt",
+      "research_blob_sha256": "4ed0478aa064a92a9434f2dd2de60fc87548febc318fd3236c987c4017bcb8c1"
+    },
+    "app/src/test/java/org/openridesync/app/HondaSessionReadTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/HondaSessionReadTest.kt",
+      "research_blob_sha256": "ddf51a3184f6535fcc84a65742d2c838a34dde5ae0c43b0c9c8b81e931954115"
+    },
+    "app/src/test/java/org/openridesync/app/ble/BtuInformationTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ble/BtuInformationTest.kt",
+      "research_blob_sha256": "9cddad4bfaabc42d7cdf5111a3ad1c1eed4c17c16ff88cfbe05b926d3b0093f2"
+    },
+    "app/src/test/java/org/openridesync/app/ble/CurrentTimeDataTest.java": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ble/CurrentTimeDataTest.java",
+      "research_blob_sha256": "d57a903d419ac772d18d05e608ea06bbd0699a65d9c86fca8173a68de672876e"
+    },
+    "app/src/test/java/org/openridesync/app/ble/CurrentTimeServerCompatibilityTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ble/CurrentTimeServerCompatibilityTest.kt",
+      "research_blob_sha256": "74350008244100b998df22120130c852b8379d09bf139da9489e4f848525c851"
+    },
+    "app/src/test/java/org/openridesync/app/ble/CurrentTimeServerPolicyTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ble/CurrentTimeServerPolicyTest.kt",
+      "research_blob_sha256": "1362f7fc5424df59067047c21bbe50173a03cf8cd92035519d5cc86a407ba2f9"
+    },
+    "app/src/test/java/org/openridesync/app/ble/GattNotificationQueueTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ble/GattNotificationQueueTest.kt",
+      "research_blob_sha256": "5c125935e4327ad12ae08ecfa7652aa876d1b985776337a141620805b2421b6c"
+    },
+    "app/src/test/java/org/openridesync/app/ble/GattSessionLifecycleTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ble/GattSessionLifecycleTest.kt",
+      "research_blob_sha256": "7316d64b644f7056ad6cc50fd61d30389c31575d4eed1162e7f7719dd7a88088"
+    },
+    "app/src/test/java/org/openridesync/app/ble/Gen1AssignmentExchangeTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ble/Gen1AssignmentExchangeTest.kt",
+      "research_blob_sha256": "aec10a93d372f88675e1031bbb383beba1741c88f268d954554eeceab10018ee"
+    },
+    "app/src/test/java/org/openridesync/app/ble/Gen1AssignmentsTest.java": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ble/Gen1AssignmentsTest.java",
+      "research_blob_sha256": "d3a121702452b8307d14136b227ad688841be0bb26315f4734caf81887662c57"
+    },
+    "app/src/test/java/org/openridesync/app/ble/Gen1ControlExchangeTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ble/Gen1ControlExchangeTest.kt",
+      "research_blob_sha256": "221d0a9a1ba61f884221beea8063bc629af5ffb48aa744aad51b50dbc1071bfd"
+    },
+    "app/src/test/java/org/openridesync/app/ble/Gen1ControlPointTest.java": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ble/Gen1ControlPointTest.java",
+      "research_blob_sha256": "c23025ec365ff631d71e738f68d5c5d9cd11ef74678e07f43f34735da2cc6bf6"
+    },
+    "app/src/test/java/org/openridesync/app/ble/Gen1InputMonitorTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ble/Gen1InputMonitorTest.kt",
+      "research_blob_sha256": "2066a5916ee1351b9294df027ba7ef605d9afee145ad1d904c86e03d6f124bde"
+    },
+    "app/src/test/java/org/openridesync/app/ble/Gen1InputTest.java": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ble/Gen1InputTest.java",
+      "research_blob_sha256": "5b4677249c0f1c1ce9e20da2942948af1be68bd7ec78862d60464284797f477c"
+    },
+    "app/src/test/java/org/openridesync/app/ble/Gen1ProjectionTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ble/Gen1ProjectionTest.kt",
+      "research_blob_sha256": "689d4b5abae4d809ecd4004bafebbec7b40c2af57c49d8c12f79cf5528a8a2a3"
+    },
+    "app/src/test/java/org/openridesync/app/ble/Gen1RuntimePolicyTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ble/Gen1RuntimePolicyTest.kt",
+      "research_blob_sha256": "b3f1494ecf25c127b2e43f446780f34648844b9c359180be9f703f5ace7b372f"
+    },
+    "app/src/test/java/org/openridesync/app/ble/Gen1SecurityTest.java": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ble/Gen1SecurityTest.java",
+      "research_blob_sha256": "adacb68bb9271186adfe26b72c1ea107bdcbb0cf5257488b97843b440be97996"
+    },
+    "app/src/test/java/org/openridesync/app/ble/Gen1ShutdownTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ble/Gen1ShutdownTest.kt",
+      "research_blob_sha256": "bc9a3a2d73a04c9eee0d4bcdba1621738462524fb5f3b3cf100ee3b881832b91"
+    },
+    "app/src/test/java/org/openridesync/app/calls/CallProjectionTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/calls/CallProjectionTest.kt",
+      "research_blob_sha256": "23755e90ead0feb40d3720b10f7cef7405712c1ff79ffb3900c200676865813f"
+    },
+    "app/src/test/java/org/openridesync/app/calls/CallsScreenTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/calls/CallsScreenTest.kt",
+      "research_blob_sha256": "5b891b76d8d7179e869de1befb14c2f64cd9688f1449d3127eb52ea07d1e2e6d"
+    },
+    "app/src/test/java/org/openridesync/app/calls/NativeCallsControlTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/calls/NativeCallsControlTest.kt",
+      "research_blob_sha256": "b747a65d68de73c3d7affcf6bd5685850054c1b151c0769f012220adf9d481a4"
+    },
+    "app/src/test/java/org/openridesync/app/calls/NativeCallsTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/calls/NativeCallsTest.kt",
+      "research_blob_sha256": "99730b1f5d84323439c55627c79b4d11280f0a8f32215aae1a07e5dab9c74dae"
+    },
+    "app/src/test/java/org/openridesync/app/guides/GuideDownloadTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/guides/GuideDownloadTest.kt",
+      "research_blob_sha256": "2b02fbe43866ed546ee9726e4c95241f8fa25a7b6f7aaa38dab09721fd10eb9f"
+    },
+    "app/src/test/java/org/openridesync/app/guides/GuideUrlPolicyTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/guides/GuideUrlPolicyTest.kt",
+      "research_blob_sha256": "c7b7849f6135f946466b53fe4e5e04db5865cf07f1cd00c80f53983980c8bc90"
+    },
+    "app/src/test/java/org/openridesync/app/guides/VehicleGuideTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/guides/VehicleGuideTest.kt",
+      "research_blob_sha256": "206fe6743033a558b67219af16a840e75a9f4e7cb19b2a2b021595dfe582cc62"
+    },
+    "app/src/test/java/org/openridesync/app/media/FavoriteMusicTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/media/FavoriteMusicTest.kt",
+      "research_blob_sha256": "c7dd68f426ebe2235b661e36222f711345dfd0c5e02b08a15ed82c4043f5295d"
+    },
+    "app/src/test/java/org/openridesync/app/media/FavoriteSessionAcquisitionTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/media/FavoriteSessionAcquisitionTest.kt",
+      "research_blob_sha256": "ed9e363648b29902efc2cdd8f6ba89e7fa4f123ec20d5cb3937da28434fa2ee0"
+    },
+    "app/src/test/java/org/openridesync/app/media/FavoriteStartGateTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/media/FavoriteStartGateTest.kt",
+      "research_blob_sha256": "ada3f15eae817bf8ca241d938e9eb2a4b357f3944dc1ada59eedb0c3cfeb3164"
+    },
+    "app/src/test/java/org/openridesync/app/media/MediaJourneyTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/media/MediaJourneyTest.kt",
+      "research_blob_sha256": "c915887db6fcf1523aca585102dc5bc5bc1b8d7b60c4b930cdb87829daf354a9"
+    },
+    "app/src/test/java/org/openridesync/app/media/MusicProjectionTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/media/MusicProjectionTest.kt",
+      "research_blob_sha256": "baffa30b1ee01347baf57d88c35a708f38253ea79ff094b4f02db61b248fc8b9"
+    },
+    "app/src/test/java/org/openridesync/app/media/NativeMediaArtworkTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/media/NativeMediaArtworkTest.kt",
+      "research_blob_sha256": "9d891e884109565739766fce46ff9d2dacbb2ad39113e3e0f539b63ffcaf1a01"
+    },
+    "app/src/test/java/org/openridesync/app/media/NativeMediaPolicyTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/media/NativeMediaPolicyTest.kt",
+      "research_blob_sha256": "20fd6d9d646fbf2302478ed9b5b830ad89428c3134e75e25346763db2f6be50f"
+    },
+    "app/src/test/java/org/openridesync/app/messages/IncomingMessagesTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/messages/IncomingMessagesTest.kt",
+      "research_blob_sha256": "eae310a47a3ddb49e35523958fd1061644782c4505d101c8b83c66b004a09d14"
+    },
+    "app/src/test/java/org/openridesync/app/messages/MessageProjectionTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/messages/MessageProjectionTest.kt",
+      "research_blob_sha256": "174fcb810504842d1daa2e8886a5502480ba19ae43aecd0174ee626ad258f607"
+    },
+    "app/src/test/java/org/openridesync/app/messages/MessageRecoveryStoreTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/messages/MessageRecoveryStoreTest.kt",
+      "research_blob_sha256": "2f73a0609d6439d5c210eeab08ecb57002923695f009f795abb2f9c3dd7213e9"
+    },
+    "app/src/test/java/org/openridesync/app/messages/MessagesScreenTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/messages/MessagesScreenTest.kt",
+      "research_blob_sha256": "a73aef360f0a307252d41f1aef0cec24b8ccc5b0dde6b856ee5ae83507a836b7"
+    },
+    "app/src/test/java/org/openridesync/app/messages/NativeMessagesTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/messages/NativeMessagesTest.kt",
+      "research_blob_sha256": "11d35b9aa5cdd0b651a4e9168b3b58bb81cbf1b1b12108820cc770517a3a00f1"
+    },
+    "app/src/test/java/org/openridesync/app/messages/NativeRideReplyTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/messages/NativeRideReplyTest.kt",
+      "research_blob_sha256": "1da44ce1715c757fd6a4ecb416987fc50104927c91593a0005ebd5dac38db9ab"
+    },
+    "app/src/test/java/org/openridesync/app/navigation/AppRouteJourneysTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/navigation/AppRouteJourneysTest.kt",
+      "research_blob_sha256": "8b8e13b29aec37aa36f2314486c43b3955890979ffbca5d8e0239084cc459e36"
+    },
+    "app/src/test/java/org/openridesync/app/navigation/AppRoutesTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/navigation/AppRoutesTest.kt",
+      "research_blob_sha256": "8d22123ce93d879ea7ace16e21e681d0566bac0fcafb6c590833c15706733048"
+    },
+    "app/src/test/java/org/openridesync/app/navigation/GoogleMapsManeuversTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/navigation/GoogleMapsManeuversTest.kt",
+      "research_blob_sha256": "b1da52164570335bbd7bd2d2f7074ff9a8a6dc660aa0353c1434470be9973e2a"
+    },
+    "app/src/test/java/org/openridesync/app/navigation/MainTabsTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/navigation/MainTabsTest.kt",
+      "research_blob_sha256": "1a2960f2ef1e71f9c0becc9af5d93cfeb07d012bdcf51d60cbb9e4257d6f09f1"
+    },
+    "app/src/test/java/org/openridesync/app/navigation/MapsDestinationTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/navigation/MapsDestinationTest.kt",
+      "research_blob_sha256": "1fd1a3fce6238fcc4400a7e58ea5dd552d2cb7377eee552390631a21b2174efc"
+    },
+    "app/src/test/java/org/openridesync/app/navigation/MapsNotificationTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/navigation/MapsNotificationTest.kt",
+      "research_blob_sha256": "e09a5238dc44aebf27f8c94a31e3d4649ab79a0ebc1b9a776efc5bd8c8e31812"
+    },
+    "app/src/test/java/org/openridesync/app/navigation/NativeNavigationControlTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/navigation/NativeNavigationControlTest.kt",
+      "research_blob_sha256": "58e0ff0b1bc3a0820e004d9906d2c0a4228859e8bd229742183e348683484713"
+    },
+    "app/src/test/java/org/openridesync/app/navigation/NavigationProjectionTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/navigation/NavigationProjectionTest.kt",
+      "research_blob_sha256": "f9973e6e3e8a79a4d5bab7671b5378bf1c9bfe49ba57c6c94a25ef6f77283b65"
+    },
+    "app/src/test/java/org/openridesync/app/navigation/NavigationScreenTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/navigation/NavigationScreenTest.kt",
+      "research_blob_sha256": "2afac72a4c2a53265802d23d81ce1953de6c1056ce579a7a0b788141ea0f0685"
+    },
+    "app/src/test/java/org/openridesync/app/pairing/CompanionChoiceTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/pairing/CompanionChoiceTest.kt",
+      "research_blob_sha256": "9ceb6abb6bff625c8255d470573890737cd3381ec2646662fb0a3c9ef2cc9705"
+    },
+    "app/src/test/java/org/openridesync/app/pairing/PairingTabLifecycleTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/pairing/PairingTabLifecycleTest.kt",
+      "research_blob_sha256": "c033ed42fb3ac874042f082b835f1aed9e3f2d44fbe78840a3011831006c667f"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/DashboardCustomizationContentTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/DashboardCustomizationContentTest.kt",
+      "research_blob_sha256": "3c5a364bd52c3ecd819edf6f1a3264f25379a42aa04c8dff50e917b488f8710c"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/DashboardPreferencesTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/DashboardPreferencesTest.kt",
+      "research_blob_sha256": "5499d4aafd49b12f4c35e4b8dc3fd21d0a37e22379e50ff59348059643dbd2e9"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/HandlebarTestLifetimeTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/HandlebarTestLifetimeTest.kt",
+      "research_blob_sha256": "78012b0f6cd4a0205100ba2cb36bd4e2bcf2f497427c862da901650774b89c1d"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/HandlebarTestTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/HandlebarTestTest.kt",
+      "research_blob_sha256": "e7753fd87dc1b562caf47575dc006ca2da0def3289ecf0222dc045085016e5d5"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/MainMenuSelectionTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/MainMenuSelectionTest.kt",
+      "research_blob_sha256": "08a825dd5067dce481705bea21ffd3d48e722824fd5afc5fdd00c612cde6ae41"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/QuickReplyPreferencesTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/QuickReplyPreferencesTest.kt",
+      "research_blob_sha256": "e311a7fdcfc60461e4510855a7d834d4619f498552204449f70a6fd364b614a9"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RecognitionLanguagesTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RecognitionLanguagesTest.kt",
+      "research_blob_sha256": "6cfd3f5077b6c0561de001aeed3809d87f72221cc4b1e1364873c18819095b17"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideCallContentTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideCallContentTest.kt",
+      "research_blob_sha256": "931e1c6290961606f4fcea7fcf3624b06d307e329d7268a3d6d4c538a21f22ab"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideCallContextTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideCallContextTest.kt",
+      "research_blob_sha256": "089ac57871a4ca42ad105cc856c8468449b2c17c57cc6f06ce47b7642b4c45cb"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideDeviceStatusTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideDeviceStatusTest.kt",
+      "research_blob_sha256": "77998302bde7d8ff75569bfe7ae89b257e3a8f47e426d27c22afa8a8030afac8"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideForegroundTypesTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideForegroundTypesTest.kt",
+      "research_blob_sha256": "dc21df0d91a57ed95f20b45906a3a470e2914669d81e4d3b66b7aa8286c2612f"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideIndicatorsTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideIndicatorsTest.kt",
+      "research_blob_sha256": "ac771760d70fbfb2ddc558d7c5872df257d7f4c57b9feb21e82a6ebfd94782bc"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideMessageReplyTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideMessageReplyTest.kt",
+      "research_blob_sha256": "2407010be476790fdb2db4fa758af15083d5403e6f914cd312725df2e5df5730"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideModeSwitchTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideModeSwitchTest.kt",
+      "research_blob_sha256": "117931e78eaaf60da0b6fe505535b58ad07eb93253b3216ffc9c7fa4335587ff"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideNavigationContentTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideNavigationContentTest.kt",
+      "research_blob_sha256": "766657369835e59a70bafdccdd4e0bf5c19f329ff599b40d68aac40ba52d85c6"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RidePageActionsTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RidePageActionsTest.kt",
+      "research_blob_sha256": "bb5a711950af9bf2b341ddde1a124277b994fbbe3e5ed9efac8d25e1c503d7ea"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RidePagesRecoveryTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RidePagesRecoveryTest.kt",
+      "research_blob_sha256": "c2ccffc59893c6364ec93885f867b642021670202618d83f2f0168b27380469c"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RidePagesTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RidePagesTest.kt",
+      "research_blob_sha256": "a74c926da197b9ab91ed1ad61d1e73bac07c3fad107fa6e5727f6a7a1f97d610"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RidePhoneContentTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RidePhoneContentTest.kt",
+      "research_blob_sha256": "acf332264a1bcf1df242a8b0c517815c6995d11066bad3601f29d9e0089539eb"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RidePolicyTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RidePolicyTest.kt",
+      "research_blob_sha256": "a18e0bb426bb8674ad8c1c46e6441fb349c4fd828eba10f7486912f046a6d976"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RidePopupsTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RidePopupsTest.kt",
+      "research_blob_sha256": "4cabf11305b49d7988809ccb3631ff9f0906d575dca06da36827c9cdb420d38f"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RidePreferencesPersistenceTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RidePreferencesPersistenceTest.kt",
+      "research_blob_sha256": "9123fe4088435d1ae64605b2964804b06ef91e463865ae69e79e9e8c09e96672"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RidePreviewLayoutTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RidePreviewLayoutTest.kt",
+      "research_blob_sha256": "03267204c83888ae71c0b70421b6381a588b295e26acf3603c2f9777eb62e50d"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideReadabilityContentTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideReadabilityContentTest.kt",
+      "research_blob_sha256": "26d6a3a9b70c6b0cc95120b12e065d2330600a1c2eca51216573ecaac6d21dfc"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideRecognitionTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideRecognitionTest.kt",
+      "research_blob_sha256": "46045363eeaf9bda5aea14c8c3454c79b6a8f57b136f82ee2fc12f86e5cb8b9e"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideRecoveryTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideRecoveryTest.kt",
+      "research_blob_sha256": "7045f482a9823ea2d04131044c97ca6e8d4078caffb2c487c4225ab01d24c47a"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideReplyPreviewTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideReplyPreviewTest.kt",
+      "research_blob_sha256": "5ceade6990c14ecde42eaecddd9d017bef4321c685df757cd7b0dd4aa6e34377"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideReplyUiTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideReplyUiTest.kt",
+      "research_blob_sha256": "1612293d15c249d0e1962d63445834e0d8cfdbffb89cc6ea310b5eeb46667919"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideRidingMenuTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideRidingMenuTest.kt",
+      "research_blob_sha256": "7b0ad71f4989cfdba50c837ce2be44f471663954aa908b5ddb9da35afa4acc06"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideScreenAwakeTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideScreenAwakeTest.kt",
+      "research_blob_sha256": "7f5e6dceaa179d7eac65b80f308593bf3daa81f8cb70c4fa410be68a0998516a"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideServiceLifecycleTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideServiceLifecycleTest.kt",
+      "research_blob_sha256": "b1c59866efbd9b3bfc2685792c5d48c58e6f49957b53e66c94f9d0abf814a9d4"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideSpeechTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideSpeechTest.kt",
+      "research_blob_sha256": "4621c1dc5a44c3453cab8d6caacb3b0fc89046e5c95c634cb6fa0785646a6150"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideStartupPolicyTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideStartupPolicyTest.kt",
+      "research_blob_sha256": "9af1e13e1a22ee39bbb128456a90b692b6a67ae939d22637f031882b408e290b"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideStatusBarTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideStatusBarTest.kt",
+      "research_blob_sha256": "4ddb80d3c22612aa981223abb95587f8b438deab0150f76ab1e6efed74bdbabe"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideStatusPagesTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideStatusPagesTest.kt",
+      "research_blob_sha256": "185a834f8af3ca4c704d23fa6a980bed1cf7f2a9cae70b767b28a81d67bf8e58"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideStatusReportTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideStatusReportTest.kt",
+      "research_blob_sha256": "1a576470949f17e25016cce91a8559c82cfa3824e03fe2c27a254a256b901f2b"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideStatusUiTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideStatusUiTest.kt",
+      "research_blob_sha256": "abadeb425e1aedc7c2f844a7f9267798dc9459c1a94870f1a81f1a8512318023"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/RideVolumeTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/RideVolumeTest.kt",
+      "research_blob_sha256": "aa4fd65b1e111f44efaf3bd8fed3ca5d4055f7a03e2da60cc68f00f41ec4022e"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/VehicleOperationGateTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/VehicleOperationGateTest.kt",
+      "research_blob_sha256": "3ceeb9b9abf91b4fc69cc9fc0394d26eaf6a29526060ffda6a1f5a0de7698380"
+    },
+    "app/src/test/java/org/openridesync/app/runtime/VolumeProjectionTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/runtime/VolumeProjectionTest.kt",
+      "research_blob_sha256": "2d304ed6f9c9994fe0fe4b22699de9e2440e697161f1719637ff19d44842ab0d"
+    },
+    "app/src/test/java/org/openridesync/app/trips/TripFormatTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/trips/TripFormatTest.kt",
+      "research_blob_sha256": "1a1b57772049c3dd25c92c526b9e1e111643b2d5a87d4bbeeb2f41ab3d129c0c"
+    },
+    "app/src/test/java/org/openridesync/app/trips/TripJourneyTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/trips/TripJourneyTest.kt",
+      "research_blob_sha256": "229249b07ed99672edb7f64065cf7dcceaf7ce46a7ab41e2b9b19e0c47c999e3"
+    },
+    "app/src/test/java/org/openridesync/app/trips/TripPointStoreTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/trips/TripPointStoreTest.kt",
+      "research_blob_sha256": "943b9ab8284080fe49cb63c2446f39d410e0534cef67fdb17eccd78bd9bb6fcc"
+    },
+    "app/src/test/java/org/openridesync/app/trips/TripRecordingScreenTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/trips/TripRecordingScreenTest.kt",
+      "research_blob_sha256": "7a36b594dc8ee9b9af94698f1d1002acaff3bbe495951b34b50db0420825e6cb"
+    },
+    "app/src/test/java/org/openridesync/app/trips/TripRecordingTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/trips/TripRecordingTest.kt",
+      "research_blob_sha256": "3ecefae8ff2dc3e15c026a778f55a27d0e16c0c4f046101a7d072296d27042aa"
+    },
+    "app/src/test/java/org/openridesync/app/trips/TripReviewContentTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/trips/TripReviewContentTest.kt",
+      "research_blob_sha256": "5df04920f561a7d931cc7680a85e8820cb83dcc5eccb52c342ffdeb04f88862a"
+    },
+    "app/src/test/java/org/openridesync/app/trips/TripRouteTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/trips/TripRouteTest.kt",
+      "research_blob_sha256": "c56c244f25a51011f0b5e60424cb20bd395e2be49d9ee38d20b0b4ad78fcece6"
+    },
+    "app/src/test/java/org/openridesync/app/trips/TripRulesTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/trips/TripRulesTest.kt",
+      "research_blob_sha256": "d7370926d3dff83c587df832ebd218ebf7798c48243c505e65e392d938c1dd1f"
+    },
+    "app/src/test/java/org/openridesync/app/ui/FeatureScreenGalleryTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ui/FeatureScreenGalleryTest.kt",
+      "research_blob_sha256": "40877828126a6abe557e2fc39148a887a0613d77351dbc4a3ddb2cddbe627c2d"
+    },
+    "app/src/test/java/org/openridesync/app/ui/HomeObservationLifecycleTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ui/HomeObservationLifecycleTest.kt",
+      "research_blob_sha256": "3f05a25522de334de6012437b6802cd4f64d099370fafc1e8eab2419f5b21098"
+    },
+    "app/src/test/java/org/openridesync/app/ui/HomeOverviewContentTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ui/HomeOverviewContentTest.kt",
+      "research_blob_sha256": "dfdbf4b7944299b6f2902a2d3dd287549f79c263f76bc85181d37bc96854add9"
+    },
+    "app/src/test/java/org/openridesync/app/ui/HomeOverviewTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ui/HomeOverviewTest.kt",
+      "research_blob_sha256": "c9643b0d59ce562a1427ce4f99c97ed981828a0196b7c720d59daa3b30eed459"
+    },
+    "app/src/test/java/org/openridesync/app/ui/HostComposeLayoutTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ui/HostComposeLayoutTest.kt",
+      "research_blob_sha256": "028e4f948d0467354f12d053077f741110128d2f2d15cf2f38b6d0c65ed072d3"
+    },
+    "app/src/test/java/org/openridesync/app/ui/MainTabShellTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ui/MainTabShellTest.kt",
+      "research_blob_sha256": "4106e42eb2d4bc8fb474b665ef4026f5b16e5575ce4b2009c377b64e21d190ef"
+    },
+    "app/src/test/java/org/openridesync/app/ui/NotificationListenerStatusTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ui/NotificationListenerStatusTest.kt",
+      "research_blob_sha256": "6da9a1ed15ddc34beb58bbc6f9c4047cf42c06bc08ada70b8319a8f35a1845f4"
+    },
+    "app/src/test/java/org/openridesync/app/ui/QuickReplySettingsScreenTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ui/QuickReplySettingsScreenTest.kt",
+      "research_blob_sha256": "43de5422dcf26b8e0b7ffda7da2abab5fc0ccf05eabb8e291b86cb8bc59cc266"
+    },
+    "app/src/test/java/org/openridesync/app/ui/RecognitionLanguageScreenTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ui/RecognitionLanguageScreenTest.kt",
+      "research_blob_sha256": "5129fda3dce9ba0c584a88db8c4514743ceb55a0b5875812dec787deadbb9cf6"
+    },
+    "app/src/test/java/org/openridesync/app/ui/RedesignGalleryTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ui/RedesignGalleryTest.kt",
+      "research_blob_sha256": "6d768d36b43c8c2ad5ce8c55939409ce9b5bfefe892a60fe2f4b746818a6dd82"
+    },
+    "app/src/test/java/org/openridesync/app/ui/SettingsHubTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ui/SettingsHubTest.kt",
+      "research_blob_sha256": "cbd23071aaa1c2bff37311b3e92387add28a132a548dc3bc7d1c9ae7481fda61"
+    },
+    "app/src/test/java/org/openridesync/app/ui/ShellScreenGalleryTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ui/ShellScreenGalleryTest.kt",
+      "research_blob_sha256": "0467f64c75efe67df31ffed3b759607d55dec6792dc8068861e984f0ed8b14e8"
+    },
+    "app/src/test/java/org/openridesync/app/ui/WifiNamePermissionTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ui/WifiNamePermissionTest.kt",
+      "research_blob_sha256": "1646614e08b8231039ff4d947bf88e83e21d17db78ae1fa91f69bb072732ca1f"
+    },
+    "app/src/test/java/org/openridesync/app/ui/theme/AppearancePreferencesTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ui/theme/AppearancePreferencesTest.kt",
+      "research_blob_sha256": "528600f0fed060e58da09c787673a30619ccda7a0e65b7bdb00e8453e5e522aa"
+    },
+    "app/src/test/java/org/openridesync/app/ui/theme/AppearanceSystemBarsTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/ui/theme/AppearanceSystemBarsTest.kt",
+      "research_blob_sha256": "fc1492d029c8a7f4522b32a6abb39dceb22aaae5ee77adbf19d3012c13d6414b"
+    },
+    "app/src/test/java/org/openridesync/app/vehicles/GarageContentGridTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/vehicles/GarageContentGridTest.kt",
+      "research_blob_sha256": "83c752501a87e016bed621521ab8b02df3098989ee17101e4200c4f3f3069ae3"
+    },
+    "app/src/test/java/org/openridesync/app/vehicles/GarageLayoutTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/vehicles/GarageLayoutTest.kt",
+      "research_blob_sha256": "a7d6208349c5478d0dfb6ef9a6fa8382519912f877484e11a12cc8ad96b62e65"
+    },
+    "app/src/test/java/org/openridesync/app/vehicles/GarageManagementContentTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/vehicles/GarageManagementContentTest.kt",
+      "research_blob_sha256": "f7c641166ef8f9c5d6241a5ae11f5b57eefb43875eaa25ea37a52df0979836cd"
+    },
+    "app/src/test/java/org/openridesync/app/vehicles/GarageMutationTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/vehicles/GarageMutationTest.kt",
+      "research_blob_sha256": "5577e7c247bac91bcd96697092fbffe001dfa134bc593b4006464ac37e1938d7"
+    },
+    "app/src/test/java/org/openridesync/app/vehicles/VehicleImageCacheTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/vehicles/VehicleImageCacheTest.kt",
+      "research_blob_sha256": "ae73f2a8207d4448f47eb4182e34e9969cd7dfb6c9ba3f7a79576a04c756d12a"
+    },
+    "app/src/test/java/org/openridesync/app/vehicles/VehicleImageRequestsTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/vehicles/VehicleImageRequestsTest.kt",
+      "research_blob_sha256": "649442d4f25cfa3981133c0661d71a93148a0b34bc18eeefa0c47d9b5afadce1"
+    },
+    "app/src/test/java/org/openridesync/app/vehicles/VehicleJourneyTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/vehicles/VehicleJourneyTest.kt",
+      "research_blob_sha256": "bdc5eceaee587813bebbd83811fe949b3415199649704fd1816d5bde3d83b0ed"
+    },
+    "app/src/test/java/org/openridesync/app/vehicles/VehicleMetadataTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/vehicles/VehicleMetadataTest.kt",
+      "research_blob_sha256": "31696dedbb565fbe685c65e968f31ce5eb1aba443f924495913abbda10aea520"
+    },
+    "app/src/test/java/org/openridesync/app/vehicles/VehicleWritesTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/vehicles/VehicleWritesTest.kt",
+      "research_blob_sha256": "72088be9aa611617ae6bfc66b373db90f1ac52c5459dd53da57ee789abd27e28"
+    },
+    "app/src/test/java/org/openridesync/app/weather/ForecastCompletenessTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/weather/ForecastCompletenessTest.kt",
+      "research_blob_sha256": "2d603dee21a79d678a3e08eefdab6c6097f02b0cc0bd610bd38ca9953e1db00c"
+    },
+    "app/src/test/java/org/openridesync/app/weather/HomeWeatherTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/weather/HomeWeatherTest.kt",
+      "research_blob_sha256": "8cad6fa390526baf0702fbe02412f8520d337674cc41b4220bce6f3341c1305b"
+    },
+    "app/src/test/java/org/openridesync/app/weather/RideWeatherLifecycleTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/weather/RideWeatherLifecycleTest.kt",
+      "research_blob_sha256": "b6e0d62a56f79010953b83772427617af316ef82c984cfbd8729995a6cb91542"
+    },
+    "app/src/test/java/org/openridesync/app/weather/WeatherDataTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/weather/WeatherDataTest.kt",
+      "research_blob_sha256": "7f5c2864b696a01e50800f3723ecc921a22035e22718bc85abe84e09b8b049c6"
+    },
+    "app/src/test/java/org/openridesync/app/weather/WeatherProjectionTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/weather/WeatherProjectionTest.kt",
+      "research_blob_sha256": "0955a40433cd376dcb147733b3cee589e95d9766a665ef4eebfb49cfe9224287"
+    },
+    "app/src/test/java/org/openridesync/app/weather/WeatherRequestGateTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/weather/WeatherRequestGateTest.kt",
+      "research_blob_sha256": "4196c697d9fbce5929855a435463d7977e9fe0123e60ec8a1ca12b7ba5355208"
+    },
+    "app/src/test/java/org/openridesync/app/weather/WeatherSpeechModeTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/weather/WeatherSpeechModeTest.kt",
+      "research_blob_sha256": "b76305152d2b99a9797d5d73eb28b874bb7fff0dc7eadc3127b484958b74d7c8"
+    },
+    "app/src/test/java/org/openridesync/app/weather/WeatherViewModelLifecycleTest.kt": {
+      "research_path": "apps/open-roadsync/android/app/src/test/java/org/openridesync/app/weather/WeatherViewModelLifecycleTest.kt",
+      "research_blob_sha256": "6e9869350c896904fce35376aefda0088b6b150f31fe14a7e79880f9cbf30220"
+    },
+    "auth-bridge/build.gradle.kts": {
+      "research_path": "apps/open-roadsync/android/auth-bridge/build.gradle.kts",
+      "research_blob_sha256": "0129ecabd4c006dd8d78cb20a346ad2fc2102aad27762c2b54d9882dcbf6c38c"
+    },
+    "auth-bridge/src/main/java/org/openridesync/authbridge/Loopback.java": {
+      "research_path": "apps/open-roadsync/android/auth-bridge/src/main/java/org/openridesync/authbridge/Loopback.java",
+      "research_blob_sha256": "19a0bec60152d654bb7dbb63ec92408f38078dce35ef25ba8ba00797a7091877"
+    },
+    "auth-bridge/src/test/java/org/openridesync/authbridge/LoopbackCancellationTest.java": {
+      "research_path": "apps/open-roadsync/android/auth-bridge/src/test/java/org/openridesync/authbridge/LoopbackCancellationTest.java",
+      "research_blob_sha256": "c3f60964baba2c33dc47567c86a6a7abc91e5df144c047f707fec4b16146cc08"
+    },
+    "auth-bridge/src/test/java/org/openridesync/authbridge/LoopbackTest.java": {
+      "research_path": "apps/open-roadsync/android/auth-bridge/src/test/java/org/openridesync/authbridge/LoopbackTest.java",
+      "research_blob_sha256": "347ba69b054450f6d3448797f4d63104c73e365153303a3b7f9520d54ca177d7"
+    },
+    "build.gradle.kts": {
+      "research_path": "apps/open-roadsync/android/build.gradle.kts",
+      "research_blob_sha256": "1c8a16dec2dfb261da62bd04b8ccb5298e1f0970f92f995f9f0710b5a3e51986"
+    },
+    "diagnostics/build.gradle.kts": {
+      "research_path": "apps/open-roadsync/android/diagnostics/build.gradle.kts",
+      "research_blob_sha256": "12a4f77be24420572d3ac7182ea21a0540df421e1f344a29555a14806337722e"
+    },
+    "diagnostics/src/main/java/org/openridesync/diagnostics/DiagnosticArchives.java": {
+      "research_path": "apps/open-roadsync/android/diagnostics/src/main/java/org/openridesync/diagnostics/DiagnosticArchives.java",
+      "research_blob_sha256": "fa5c975fa2343fb40d04e43647eab41e161f967c9bdf98747a8707c3b8dc11f5"
+    },
+    "diagnostics/src/main/java/org/openridesync/diagnostics/DiagnosticExport.java": {
+      "research_path": "apps/open-roadsync/android/diagnostics/src/main/java/org/openridesync/diagnostics/DiagnosticExport.java",
+      "research_blob_sha256": "1883287cf405a590493b1e4dd0b0f51ee49b3404b3690004c11578a9c508743c"
+    },
+    "diagnostics/src/main/java/org/openridesync/diagnostics/DiagnosticJournal.java": {
+      "research_path": "apps/open-roadsync/android/diagnostics/src/main/java/org/openridesync/diagnostics/DiagnosticJournal.java",
+      "research_blob_sha256": "1955d75dd1a823f66642771b7ba1b794cf36bae206081b708b5f596677e633a4"
+    },
+    "diagnostics/src/main/java/org/openridesync/diagnostics/DiagnosticReader.java": {
+      "research_path": "apps/open-roadsync/android/diagnostics/src/main/java/org/openridesync/diagnostics/DiagnosticReader.java",
+      "research_blob_sha256": "34ad12ff5d8acf99e56bba284ea179169790ae37c42f701610d978fe8106d80b"
+    },
+    "diagnostics/src/test/java/org/openridesync/diagnostics/DiagnosticsRegression.java": {
+      "research_path": "apps/open-roadsync/android/diagnostics/src/test/java/org/openridesync/diagnostics/DiagnosticsRegression.java",
+      "research_blob_sha256": "052f670ff34a5530cc17922b6361052fb327fb86246d71c81cecd3f091f782dd"
+    },
+    "gradle.properties": {
+      "research_path": "apps/open-roadsync/android/gradle.properties",
+      "research_blob_sha256": "fa078c27c9e4bde28a029d673875b028884505efa436b68cf60e1ac0be5b679b"
+    },
+    "gradle/libs.versions.toml": {
+      "research_path": "apps/open-roadsync/android/gradle/libs.versions.toml",
+      "research_blob_sha256": "58a692ef6c42f1df987efa333c02562a68c36bfc31b82e59ed14b55818ace3ed"
+    },
+    "gradle/wrapper/gradle-wrapper.jar": {
+      "research_path": "apps/open-roadsync/android/gradle/wrapper/gradle-wrapper.jar",
+      "research_blob_sha256": "381dff8aa434499aa93bc25572b049c8c586a67faff2c02f375e4f23e17e49de"
+    },
+    "gradle/wrapper/gradle-wrapper.properties": {
+      "research_path": "apps/open-roadsync/android/gradle/wrapper/gradle-wrapper.properties",
+      "research_blob_sha256": "42bc80546f2979857efc20b23ede63b1c5a20478aef5a5c7b89ca66fb46fc786"
+    },
+    "gradlew": {
+      "research_path": "apps/open-roadsync/android/gradlew",
+      "research_blob_sha256": "8c4c04dd98db1f00d49456dd162418a39312c5cb13d6865d783deb483bd1ed22"
+    },
+    "gradlew.bat": {
+      "research_path": "apps/open-roadsync/android/gradlew.bat",
+      "research_blob_sha256": "2f18fc6abd50803de7b3a225038d284268904c9d13caa6cf81f99365dc876479"
+    },
+    "honda/build.gradle.kts": {
+      "research_path": "apps/open-roadsync/android/honda/build.gradle.kts",
+      "research_blob_sha256": "f79394fe584c7f2cceb0b82be44078d25a24549f9d1fc4aac417d02a48bd117c"
+    },
+    "honda/src/main/java/org/openridesync/honda/HondaReadClient.java": {
+      "research_path": "apps/open-roadsync/android/honda/src/main/java/org/openridesync/honda/HondaReadClient.java",
+      "research_blob_sha256": "362a6bd95272144de595dff4028fb7dbcef8a589a261f2b0c879a22280f656b1"
+    },
+    "honda/src/main/java/org/openridesync/honda/PairedVehicleStore.java": {
+      "research_path": "apps/open-roadsync/android/honda/src/main/java/org/openridesync/honda/PairedVehicleStore.java",
+      "research_blob_sha256": "d9ce3d3780c389802ed258077c8196d4743cb20d07c4ae96ddc8bbdbbb3f2bbc"
+    },
+    "honda/src/main/java/org/openridesync/honda/TripCache.java": {
+      "research_path": "apps/open-roadsync/android/honda/src/main/java/org/openridesync/honda/TripCache.java",
+      "research_blob_sha256": "7ebfbba24f30940b47c8b730cff76847ce735f2955fd6f50df4826c602ed4a6e"
+    },
+    "honda/src/main/java/org/openridesync/honda/VehicleStore.java": {
+      "research_path": "apps/open-roadsync/android/honda/src/main/java/org/openridesync/honda/VehicleStore.java",
+      "research_blob_sha256": "24db68d08c71d396328506957a65b2af9a8c66b13f88ee8f648de6cfe22074c0"
+    },
+    "honda/src/main/proto/honda.proto": {
+      "research_path": "apps/open-roadsync/android/honda/src/main/proto/honda.proto",
+      "research_blob_sha256": "70c945d4ada7acab496bb976509c79e3a58c6a2969a638c4eace9cd58e1a2e53"
+    },
+    "honda/src/main/proto/legacy_account.proto": {
+      "research_path": "apps/open-roadsync/android/honda/src/main/proto/legacy_account.proto",
+      "research_blob_sha256": "6edce0d32d25a678ef3d30470a34473fa6a1e06c37e2caf1a8394b48797d6da2"
+    },
+    "honda/src/main/proto/legacy_pipeline.proto": {
+      "research_path": "apps/open-roadsync/android/honda/src/main/proto/legacy_pipeline.proto",
+      "research_blob_sha256": "5c5994b5200ed7b1fe0d694281bd1a808b286802850ccdfb076a6c3959291ab3"
+    },
+    "honda/src/main/proto/legacy_weather.proto": {
+      "research_path": "apps/open-roadsync/android/honda/src/main/proto/legacy_weather.proto",
+      "research_blob_sha256": "d65ddb4bb316ae127a555f9fc420d73e9858b6761514cf72067cd5873cd0c346"
+    },
+    "honda/src/test/java/org/openridesync/honda/ContractCheck.java": {
+      "research_path": "apps/open-roadsync/android/honda/src/test/java/org/openridesync/honda/ContractCheck.java",
+      "research_blob_sha256": "a157d33ada46cae14449c7e868b7e3561baa7712e48b793522061f02e3dcb41f"
+    },
+    "honda/src/test/java/org/openridesync/honda/PairedVehicleStoreCheck.java": {
+      "research_path": "apps/open-roadsync/android/honda/src/test/java/org/openridesync/honda/PairedVehicleStoreCheck.java",
+      "research_blob_sha256": "afdaf52a5fdafa8f0d445d5ee1664e2ca76a7aea60be1a73847a418aa46f3816"
+    },
+    "honda/src/test/java/org/openridesync/honda/TripCacheCheck.java": {
+      "research_path": "apps/open-roadsync/android/honda/src/test/java/org/openridesync/honda/TripCacheCheck.java",
+      "research_blob_sha256": "44f4a3c954c90aab43961f0f15c265b8caa69e0c05e4674060c74dfb580fc20d"
+    },
+    "honda/src/test/java/org/openridesync/honda/VehicleStoreCheck.java": {
+      "research_path": "apps/open-roadsync/android/honda/src/test/java/org/openridesync/honda/VehicleStoreCheck.java",
+      "research_blob_sha256": "68af4cc573c8375161b2cf9dd972b610c4deccc8fd47e6dcd44979def08b2724"
+    },
+    "host-tests/favorite-start/README.md": {
+      "research_path": "apps/open-roadsync/android/host-tests/favorite-start/README.md",
+      "research_blob_sha256": "547710ef12148d768f755bb66bd243787e7b41336cd52c44750afa7784e0bd8e"
+    },
+    "host-tests/favorite-start/activity.kt": {
+      "research_path": "apps/open-roadsync/android/host-tests/favorite-start/activity.kt",
+      "research_blob_sha256": "8f8a318ae58895b934417b326d5c4d930c8a459e8d6f9aa48d11082bd599d5f2"
+    },
+    "host-tests/favorite-start/check.kt": {
+      "research_path": "apps/open-roadsync/android/host-tests/favorite-start/check.kt",
+      "research_blob_sha256": "0807e976d81bc6858519a03b34e877dc58359405d73613eaa3a7267ad8c4a51d"
+    },
+    "host-tests/favorite-start/context.kt": {
+      "research_path": "apps/open-roadsync/android/host-tests/favorite-start/context.kt",
+      "research_blob_sha256": "6e81189df3c97627ddbf20d40eb8afac9d72f65080f7957c6da48b99d06a624d"
+    },
+    "host-tests/favorite-start/journal.kt": {
+      "research_path": "apps/open-roadsync/android/host-tests/favorite-start/journal.kt",
+      "research_blob_sha256": "074b62035d222d1d72921a289c6f2fbd55225fdf733506da26373166d9c91260"
+    },
+    "host-tests/favorite-start/media.kt": {
+      "research_path": "apps/open-roadsync/android/host-tests/favorite-start/media.kt",
+      "research_blob_sha256": "30d1e8e3d741412d4383d01021df7f5e972bd30f9cba311a97f0829d08fe086a"
+    },
+    "host-tests/favorite-start/run.py": {
+      "research_path": "apps/open-roadsync/android/host-tests/favorite-start/run.py",
+      "research_blob_sha256": "5c881d5c10d4014e7218ab3c93772e14608e8b670082c8b3d2fc8914c111e06c"
+    },
+    "settings.gradle.kts": {
+      "research_path": "apps/open-roadsync/android/settings.gradle.kts",
+      "research_blob_sha256": "07420c2f992cedb65970193dacd23620264d43d4842615dccc764e0223c9b2ea"
+    },
+    "tools/auth/login_test.js": {
+      "research_path": "apps/open-roadsync/auth/login_test.js",
+      "research_blob_sha256": "43af3bda436460d936dac99c282031574ee835b4de9a07bd375abcffd612ca0e"
+    },
+    "tools/diagnostics/test_verify_export.py": {
+      "research_path": "apps/open-roadsync/diagnostics/test_verify_export.py",
+      "research_blob_sha256": "9cdf46b0ee7dfc18b40763b63d604b6c9a9f5875f23f65f9dd6e914e87ed257b"
+    },
+    "tools/diagnostics/verify_export.py": {
+      "research_path": "apps/open-roadsync/diagnostics/verify_export.py",
+      "research_blob_sha256": "66c9c7e4a54c0e7e9421fd0049ec8498f8a95d7762b22da1368e0bbe36a134b5"
+    },
+    "app/src/main/java/org/openridesync/adapter/MusicDisplayText.java": {
+      "research_path": "apps/open-roadsync/screen_encoder/core/org/openridesync/adapter/MusicDisplayText.java",
+      "research_blob_sha256": "79c0e857eaf72fe5d2db04e8ac5e0a71201adaeac8354654e719916ebc93ac85"
+    },
+    "app/src/main/java/org/openridesync/gen1/ScreenEncoder.java": {
+      "research_path": "apps/open-roadsync/screen_encoder/core/org/openridesync/gen1/ScreenEncoder.java",
+      "research_blob_sha256": "e99cda3aeaa57ff7d4ff7b8d77879765e35bf57307266aeb21354df220679d53"
+    },
+    "tools/validation/README.md": {
+      "research_path": "tools/validation/README.md",
+      "research_blob_sha256": "9c549c2992b60dff7ce090d8770aa46bd7b03c65845a782ad2963f06aaffe0f2"
+    },
+    "tools/validation/check_build_readiness.py": {
+      "research_path": "tools/validation/check_build_readiness.py",
+      "research_blob_sha256": "d8f169092d03aca5d6c075ff4e87f528216c284c5e1cf8e65d7edc26579fd02a"
+    },
+    "tools/validation/dex_build_config.py": {
+      "research_path": "tools/validation/dex_build_config.py",
+      "research_blob_sha256": "ca1928a0b7c3ceb597721177ebe9cfad60ef68857fc9a92b28d41aa5ca0bcc61"
+    },
+    "tools/validation/test_build_readiness.py": {
+      "research_path": "tools/validation/test_build_readiness.py",
+      "research_blob_sha256": "87d55817d95e3304a75b3edb9dc389ec79d0ff8a481eb34aba62729568d3d8e2"
+    }
+  }
+}

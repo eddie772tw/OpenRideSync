@@ -1,0 +1,15 @@
+.gradle/
+.kotlin/
+**/build/
+local.properties
+/private/
+/dist/
+/app/src/private/
+auth-client.json
+google-services.json
+*.jks
+*.keystore
+*.p12
+*.pfx
+__pycache__/
+*.pyc

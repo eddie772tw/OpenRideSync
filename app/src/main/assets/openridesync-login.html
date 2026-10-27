@@ -1,0 +1,40 @@
+<!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>OpenRideSync Google 登入</title>
+<style>body{font:18px system-ui;max-width:650px;margin:30px auto;padding:25px;line-height:1.7}button{font:inherit;padding:15px}#status{white-space:pre-wrap}</style>
+<p id="status">正在開啟 Google 登入…</p><button id="retry" hidden>繼續 Google 登入</button>
+<script type="module">
+import {initializeApp} from 'https://www.gstatic.com/firebasejs/13.0.0/firebase-app.js';
+import {getAuth,setPersistence,inMemoryPersistence,GoogleAuthProvider,signInWithPopup,signOut} from 'https://www.gstatic.com/firebasejs/13.0.0/firebase-auth.js';
+const firebaseConfig = __FIREBASE_CONFIG__;
+const status=document.querySelector('#status'), retry=document.querySelector('#retry');
+const nonce=location.pathname.split('/')[2];
+let auth, pending=false, handedOff=false;
+async function login(){
+ if(pending||handedOff)return;
+ pending=true;retry.hidden=true;
+ try{
+  const provider=new GoogleAuthProvider();provider.setCustomParameters({prompt:'select_account'});
+  const result=await signInWithPopup(auth,provider);
+  const credential=GoogleAuthProvider.credentialFromResult(result);
+  if(!credential?.idToken)throw new Error('CREDENTIAL_MISSING');
+  status.textContent='Google 授權已完成，正在返回 OpenRideSync 進行原生驗證；若未自動切換，請返回 App。';
+  const response=await fetch('credential',{method:'POST',cache:'no-store',credentials:'omit',headers:{'Content-Type':'application/json','X-Local-Nonce':nonce},body:JSON.stringify({googleIdToken:credential.idToken})});
+  if(!response.ok)throw new Error('HANDOFF_FAILED');
+  const nativeResult=await response.json();
+  if(!['SUCCEEDED','FAILED','CANCELLED','TIMEOUT'].includes(nativeResult.status))throw new Error('HANDOFF_FAILED');
+  handedOff=true;
+  status.textContent=nativeResult.status==='SUCCEEDED'?'原生 Firebase 登入完成，正嘗試返回 OpenRideSync；Honda 帳號仍須另外讀取。':nativeResult.status==='FAILED'?'原生 Firebase 驗證失敗，正嘗試返回 OpenRideSync；請在 App 查看登入狀態並重新登入。':nativeResult.status==='CANCELLED'?'原生登入已取消，請返回 OpenRideSync。':'原生登入驗證逾時，請返回 OpenRideSync 重新登入。';
+  status.textContent+=' 若未自動切換，請手動返回 App。';
+ }catch(e){
+  status.textContent=e.code==='auth/popup-blocked'?'瀏覽器需要允許此頁開啟 Google 登入彈出視窗。請允許後按繼續。':e.code==='auth/popup-closed-by-user'?'已取消 Google 登入。需要時可按繼續。':'登入或交接失敗。請重試；若 App 已逾時，請返回 App 重新開始。';
+  retry.hidden=false;
+ }finally{
+  if(auth)await signOut(auth).catch(()=>{});
+  pending=false;
+ }
+}
+retry.onclick=login;
+try{
+ auth=getAuth(initializeApp(firebaseConfig));await setPersistence(auth,inMemoryPersistence);
+ await login();
+}catch(_){status.textContent='登入頁初始化失敗。請檢查網路後返回 App 重試。';}
+</script></html>

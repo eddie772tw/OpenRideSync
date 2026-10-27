@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="recognition_language_back">返回</string>
+    <string name="recognition_language_title">語音辨識語言</string>
+    <string name="recognition_language_explanation">這項本機選擇只控制語音回覆的辨識語言，不會改變 App 語言、文字轉語音語言或系統辨識服務。查看此頁不需要麥克風授權。</string>
+    <string name="recognition_language_local_policy">自動模式使用 App 語系、已讀取的 Honda 居住地及服務依序回報的語言。語音回覆會在錄音前查詢服務；查詢失敗時改用裝置預設語言。手動選擇不隨居住地變動。</string>
+    <string name="recognition_language_automatic">自動</string>
+    <string name="recognition_language_automatic_request">服務候選語言套用前的自動辨識要求：%1$s</string>
+    <string name="recognition_language_locale_candidate">zh-TW</string>
+    <string name="recognition_language_save_failed">無法儲存選擇，仍使用先前的設定。</string>
+    <string name="recognition_language_query">讀取可用辨識語言</string>
+    <string name="recognition_language_query_privacy">只查詢目前服務，不錄音、不要求授權、不下載模型，也不修改系統設定。服務可能連線至自己的伺服器。</string>
+    <string name="recognition_language_loading">正在讀取辨識服務能力…</string>
+    <string name="recognition_language_timeout">服務查詢逾時，已保存的選擇沒有變更。</string>
+    <string name="recognition_language_query_unsupported">目前服務未提供這項語言能力查詢，已保存的選擇沒有變更。</string>
+    <string name="recognition_language_query_denied">服務拒絕能力查詢。此頁不會要求麥克風授權，已保存的選擇沒有變更。</string>
+    <string name="recognition_language_query_unavailable">無法讀取服務能力，已保存的選擇沒有變更。</string>
+    <string name="recognition_language_provider">辨識服務：%1$s</string>
+    <string name="recognition_language_requested">本次查詢的辨識語言：%1$s</string>
+    <string name="recognition_language_none_reported">服務未回報項目</string>
+    <string name="recognition_language_installed">服務回報已安裝的裝置端模型</string>
+    <string name="recognition_language_pending">等待下載的裝置端模型</string>
+    <string name="recognition_language_supported">支援但仍需下載的裝置端模型</string>
+    <string name="recognition_language_online">服務回報支援的線上辨識</string>
+    <string name="recognition_language_legacy">舊版服務回報的語言</string>
+    <string name="recognition_language_legacy_warning">Android 12 及更早版本只能讀取服務選擇提供的語言資訊，無法從此列表分辨模型已安裝、等待下載或需要線上辨識。</string>
+    <string name="recognition_language_support_warning">這是服務針對本次要求的回報，不代表已成功辨識。模型已安裝也不會強制離線；等待下載或支援下載不等於已安裝。</string>
+    <string name="recognition_language_not_queried">尚未查詢目前服務能力，仍可使用已保存的語言選擇。</string>
+    <string name="recognition_language_cached_title">上次查詢的解析結果・歷史快取</string>
+    <string name="recognition_language_cached">辨識要求：%1$s\nApp 語系：%2$s\n辨識服務：%3$s\n查詢來源：%4$s</string>
+    <string name="recognition_language_cached_environment">套用的居住地：%1$s\n系統語系：%2$s\n裝置預設語系：%3$s</string>
+    <string name="recognition_language_cached_warning">這份獨立快取不會選取語言，也不能證明目前可用。變更 App 語系或服務後，請重新查詢。</string>
+</resources>

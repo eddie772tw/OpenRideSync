@@ -1,0 +1,8 @@
+// Original account path: RoadSync 26.8.10/309, APK SHA256
+// 94facfbed5044856dc65173b5a287a25418c301ca192fcd59722342c9a004cbb.
+syntax = "proto3";
+package drivemode.api.v1;
+option java_package = "org.openridesync.honda.wire";
+option java_outer_classname = "LegacyWire";
+message GetUserRequest {}
+message User { string user_id = 1; string country_code = 2; }

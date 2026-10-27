@@ -1,0 +1,5 @@
+<resources>
+    <string name="startup_channel">建議騎乘設定</string>
+    <string name="startup_title">騎乘前請檢查設定</string>
+    <string name="startup_warning">部分功能無法使用。建議您在騎乘前查看應用程式中的通知。</string>
+</resources>

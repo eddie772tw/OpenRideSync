@@ -1,0 +1,37 @@
+// RoadSync26.8.10/309 Pipeline generated descriptors; see OEM-TRIP-RECORDING.md.
+syntax = "proto3";
+package drivemode.api.v1;
+option java_package = "org.openridesync.honda.wire";
+option java_outer_classname = "PipelineWire";
+
+message CreateLocationRequest { repeated Location locations = 1; }
+message CreateLocationResponse {}
+message Location {
+  string uuid = 1;
+  string user_id = 2;
+  string trip_uuid = 3;
+  string app_session_id = 4;
+  uint64 time = 5;
+  optional float latitude = 6;
+  optional float longitude = 7;
+  optional float accuracy = 8;
+  optional float speed = 9;
+  optional float speed_accuracy = 10;
+  optional float distance = 11;
+  optional float bearing = 12;
+  optional float bearing_accuracy = 13;
+  optional float altitude = 14;
+  optional float vertical_accuracy = 15;
+  string provider = 16;
+  uint64 device_time = 17;
+  bool is_debug = 18;
+  string residence_country = 19;
+  uint64 server_time = 20;
+  uint32 app_version_code = 21;
+  string vehicle_series_code = 22;
+  string platform = 23;
+  optional sint32 offset_from_utc = 24;
+  bool is_coarse_location = 25;
+  string vehicle_info_series_code_raw = 26;
+  string vehicle_info_vehicle_name = 27;
+}

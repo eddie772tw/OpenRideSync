@@ -1,0 +1,2 @@
+package org.openridesync.diagnostics
+class DiagnosticJournal

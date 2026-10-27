@@ -1,0 +1,169 @@
+// RoadSync 26.8.10 (309), SHA256 94facfbed5044856dc65173b5a287a25418c301ca192fcd59722342c9a004cbb.
+// Recovered wire contract, not OEM generated implementation. Unknown fields are retained.
+syntax = "proto3";
+package com.honda.roadsync.api.v2;
+option java_package = "org.openridesync.honda.wire";
+option java_outer_classname = "HondaWire";
+
+message ListModelCatalogsRequest {
+  repeated int32 meter_generations = 1;
+  bool only_own_country = 2;
+}
+
+message ListModelSeriesRequest {
+  repeated int32 meter_generations = 1;
+  repeated string model_series_labels = 2;
+  bool only_own_country = 3;
+}
+
+message ListModelsRequest {
+  repeated int32 meter_generations = 1;
+  repeated string model_labels = 2;
+  repeated string series_codes = 3;
+  string country_code = 4;
+}
+
+message ListModelCatalogsResponse {
+  repeated ModelCatalog model_catalogs = 1;
+}
+
+message ListModelSeriesResponse {
+  repeated ModelSeries model_series_list = 1;
+}
+
+message ListModelsResponse {
+  repeated Model models = 1;
+}
+
+message ModelCatalog {
+  Model model = 1;
+  int32 model_count = 2;
+}
+
+message ModelSeries {
+  repeated Model models = 1;
+}
+
+message Model {
+  string model_label = 1;
+  string model_series_label = 2;
+  ModelName model_name = 3;
+  repeated int32 model_years = 4;
+  int32 displacement = 5;
+  repeated VehicleCode vehicle_codes = 6;
+  Meter meter = 7;
+  repeated Image images = 8;
+  int64 updated_at = 9;
+}
+
+message ModelName {
+  Name display_name = 1;
+  Name default_name = 2;
+}
+
+message Name {
+  string full_name = 1;
+  repeated NamePart name_parts = 2;
+}
+
+message NamePart {
+  string value = 1;
+  bool is_official_part = 2;
+}
+
+message VehicleCode {
+  string model_code = 1;
+  string series_code = 2;
+}
+
+message Meter {
+  int32 type = 1;
+  int32 generation = 2;
+  repeated string full_supported_language_codes = 3;
+  repeated string partially_supported_language_codes = 4;
+  repeated string not_supported_language_codes = 5;
+}
+
+message Image {
+  string id = 1;
+  ModelImageDescription description = 2;
+}
+
+message ModelImageDescription {
+  ModelColor color = 1;
+  int32 direction = 2;
+  bool is_default = 3;
+}
+
+message ModelColor {
+  int32 category = 1;
+  string code = 2;
+}
+
+message GetImageBinaryRequest {
+  string image_id = 1;
+}
+
+message ImageBinary {
+  string id = 1;
+  bytes binary = 2;
+}
+
+// Version is an OEM enum on the wire; retain its raw numeric value.
+message GetModelSetupPageUrlRequest {
+  string model_label = 1;
+  string language_code = 2;
+  int32 version = 3;
+}
+message ModelSetupPageUrl { string id = 1; string url = 2; }
+message GetModelTutorialPageUrlRequest {
+  string model_label = 1;
+  string language_code = 2;
+  int32 version = 3;
+}
+message ModelTutorialPageUrl { string id = 1; string url = 2; }
+
+message GetUserRequest {}
+message User { string user_id = 1; string country_code = 2; bool country_changed = 3; }
+message ListAvailableCountriesRequest {}
+message ListAvailableCountriesResponse { repeated Country countries = 1; repeated string unchangeable_countries = 2; }
+message Country {
+ string code = 1;
+ repeated Url support_url = 2;
+ repeated Url terms_of_service_url = 3;
+ repeated Url privacy_policy_url = 4;
+ string customer_support_email = 5;
+ repeated Url faq_url = 6;
+ repeated Url privacy_choices_url = 7;
+ repeated Url terms_of_service_app_url = 8;
+ repeated Url privacy_policy_app_url = 9;
+ bool location_consent_required = 10;
+ bool is_dataact_target = 11;
+}
+message Url { string url = 1; string language = 2; }
+message GetCountryOfResidenceRequest {}
+message GetTermsUpdateRequest {}
+message TermsUpdate { bool has_update = 1; int64 update_date = 2; bool need_to_notify = 3; int32 reason = 4; }
+message GetPrivacyPolicyUpdateRequest {}
+message PrivacyPolicyUpdate { bool has_update = 1; int64 update_date = 2; bool need_to_notify = 3; }
+message ListDailyTripsRequest { optional sint32 offset_from_utc = 1; uint64 start_date = 2; int32 trips_count = 3; }
+message ListDailyTripsResponse { TripsSummary trips_summary = 1; repeated DailyTrips trips = 2; }
+message TripsSummary { float total_distance = 1; uint64 total_time = 2; uint32 total_drive_day = 3; }
+message DailyTrips {
+ uint64 trip_date = 1; repeated string trip_uuids = 2; string user_id = 3;
+ float total_distance = 4; uint64 total_time = 5; float avg_speed = 6;
+ repeated string vehicle_series_codes = 7; repeated string vehicle_display_name = 8;
+ uint64 start_time = 9; uint64 end_time = 10;
+}
+message ListTripDetailsRequest { repeated string trip_uuids = 1; }
+message ListTripDetailsResponse {
+ repeated TripDetail daily_trip_details = 1; uint64 total_time = 2;
+ float avg_speed = 3; float total_distance = 4;
+}
+message GetTripDetailRequest { string trip_id = 1; }
+message TripDetail {
+ string trip_uuid = 1;
+ float avg_speed = 4; float total_distance = 5; repeated TripLocation trip_locations = 6;
+}
+message TripLocation { string id = 1; Coord coordinates = 2; uint64 timestamp = 3; bool is_coarse = 4; }
+message Coord { double lat = 1; double lon = 2; }

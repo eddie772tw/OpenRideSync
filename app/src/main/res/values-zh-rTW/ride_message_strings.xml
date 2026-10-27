@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ride_messages">訊息</string>
+    <string name="ride_messages_empty">沒有訊息</string>
+    <string name="ride_message_reading">正在播報預覽</string>
+    <string name="ride_message_complete">預覽播報完成</string>
+    <string name="ride_message_failed">無法播報</string>
+    <string name="ride_message_prompt_ask">%1$s 有新訊息：%2$s。按確認以讀取。</string>
+    <string name="ride_message_prompt_auto">%1$s 有新訊息：%2$s。即將讀取預覽。</string>
+    <string name="ride_message_reply_prompt">請在提示結束後說出要回覆的內容。</string>
+    <string name="ride_message_reply_review">回覆內容：%1$s。按確認才會送出，按返回可重新錄音。</string>
+    <string name="ride_message_reply_dispatched">已提出回覆要求。</string>
+    <string name="ride_message_reply_not_sent">未能確認回覆已送出，請稍後確認訊息。</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="ride_status_report">狀態匯報</string>
+    <string name="ride_status_battery">手機電量</string>
+    <string name="ride_status_mobile">行動網路</string>
+    <string name="ride_status_wifi">Wi-Fi</string>
+    <string name="ride_status_loading">讀取狀態中</string>
+    <string name="ride_status_speaking">正在播報</string>
+    <string name="ride_status_unavailable">狀態無法取得</string>
+</resources>

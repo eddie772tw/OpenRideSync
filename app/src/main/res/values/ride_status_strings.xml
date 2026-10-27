@@ -1,0 +1,9 @@
+<resources>
+    <string name="ride_status_report">Status report</string>
+    <string name="ride_status_battery">Phone battery</string>
+    <string name="ride_status_mobile">Mobile network</string>
+    <string name="ride_status_wifi">Wi-Fi</string>
+    <string name="ride_status_loading">Reading status</string>
+    <string name="ride_status_speaking">Speaking status</string>
+    <string name="ride_status_unavailable">Status unavailable</string>
+</resources>

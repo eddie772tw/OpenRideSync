@@ -1,0 +1,5 @@
+<resources>
+    <string name="startup_channel">Recommended riding settings</string>
+    <string name="startup_title">Check settings before riding</string>
+    <string name="startup_warning">Some features cannot be used. We recommend that you check the notifications in the app before riding.</string>
+</resources>

@@ -1,0 +1,5 @@
+<resources>
+    <string name="ride_weather">天氣預報</string>
+    <string name="ride_weather_loading">取得天氣中</string>
+    <string name="ride_weather_unavailable">目前無法取得天氣</string>
+</resources>

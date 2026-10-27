@@ -1,0 +1,21 @@
+name: 問題回報
+description: 回報版本、操作與實際結果。
+body:
+  - type: input
+    id: version
+    attributes:
+      label: App 版本與來源版本
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 手機型號、Android 版本與車輛型號／年份
+      description: 請勿填寫裝置序號、車牌、藍牙地址或帳號。
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 操作步驟與實際結果
+      description: 說明預期結果與實際觀察；請勿附上未檢查的原始側錄、通知內容或位置資料。
+    validations:
+      required: true

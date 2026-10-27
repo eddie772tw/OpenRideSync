@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ride_navigation">導航</string>
+    <string name="ride_navigating">導航中</string>
+    <string name="ride_navigation_waiting">請在手機設定導航</string>
+    <string name="ride_navigation_cancel">結束導航？</string>
+    <string name="ride_navigation_cancel_unavailable">請在手機確認 Maps</string>
+</resources>

@@ -1,0 +1,31 @@
+// RoadSync26.8.10/309 generated Api descriptors; see OEM-WEATHER-API.md.
+syntax = "proto3";
+package drivemode.api.v1;
+option java_package = "org.openridesync.honda.wire";
+option java_outer_classname = "WeatherWire";
+
+message GetWeatherRequest { Coord coord = 1; string lang = 2; }
+message GetWeatherForecastRequest { Coord coord = 1; string lang = 2; repeated string intervals = 4; }
+message Coord { float lat = 1; float lon = 2; }
+message Weather {
+  string cod = 1;
+  Coord coord = 2;
+  repeated WeatherCondition weather = 3;
+  string base = 4;
+  Main main = 5;
+  string name = 6;
+  Clouds clouds = 7;
+  Wind wind = 8;
+  Sys sys = 9;
+  int32 dt = 10;
+}
+message WeatherCondition { int32 id = 1; string main = 2; string description = 3; string icon = 4; }
+message Main { float temp = 1; float pressure = 2; float humidity = 3; float temp_min = 4; float temp_max = 5; }
+message Clouds { int32 all = 1; }
+// These unusual names/types are the shipped legacy contract, not inferred units.
+message Wind { float lon = 1; float number = 2; }
+message Sys { int32 type = 1; int32 id = 2; int32 message = 3; string country = 4; float sunrise = 5; float sunset = 6; string pod = 7; }
+message WeatherForecast { repeated HourlyForecast forecasts = 1; City city = 2; }
+message HourlyForecast { int32 hour = 1; Forecast forecast = 2; }
+message Forecast { float dt = 1; Main main = 2; repeated WeatherCondition weather = 3; Clouds clouds = 4; Wind wind = 5; Sys sys = 6; string dt_txt = 7; }
+message City { int32 id = 1; string name = 2; Coord coord = 3; string country = 4; int32 population = 5; float timezone = 6; float sunrise = 7; float sunset = 8; }

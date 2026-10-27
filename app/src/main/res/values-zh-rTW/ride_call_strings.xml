@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ride_call">通話</string>
+    <string name="ride_call_incoming">來電</string>
+    <string name="ride_call_ongoing">通話進行中</string>
+    <string name="ride_call_waiting">請查看手機</string>
+    <string name="ride_call_unavailable">通話操作不可用</string>
+    <string name="ride_call_multiple">請在手機選擇</string>
+    <string name="ride_call_cancel">結束通話？</string>
+</resources>

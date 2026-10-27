@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ride_messages">Messages</string>
+    <string name="ride_messages_empty">No messages</string>
+    <string name="ride_message_reading">Reading preview</string>
+    <string name="ride_message_complete">Preview complete</string>
+    <string name="ride_message_failed">Speech unavailable</string>
+    <string name="ride_message_prompt_ask">New %1$s message: %2$s. Press confirm to listen.</string>
+    <string name="ride_message_prompt_auto">New %1$s message: %2$s. Reading the preview.</string>
+    <string name="ride_message_reply_prompt">Say your reply after this prompt.</string>
+    <string name="ride_message_reply_review">Your reply: %1$s. Press confirm to send, or back to record again.</string>
+    <string name="ride_message_reply_dispatched">Reply requested.</string>
+    <string name="ride_message_reply_not_sent">The reply request could not be confirmed. Please check your messages later.</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ride_navigation">Navigation</string>
+    <string name="ride_navigating">Navigating</string>
+    <string name="ride_navigation_waiting">Set route on phone</string>
+    <string name="ride_navigation_cancel">End?</string>
+    <string name="ride_navigation_cancel_unavailable">Check Maps on phone</string>
+</resources>

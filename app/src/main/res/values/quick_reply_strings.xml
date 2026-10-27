@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quick_reply_default_1">I am driving.</string>
+    <string name="quick_reply_default_2">Be there soon.</string>
+    <string name="quick_reply_default_3">I am running late.</string>
+    <string name="quick_reply_default_4">Got it</string>
+    <string name="quick_reply_default_5">No</string>
+    <string name="quick_reply_title">Quick replies</string>
+    <string name="quick_reply_local_only">Saved only in this App on this phone. Edits and order changes take effect after Save. Cancel discards changes.</string>
+    <string name="quick_reply_corrupt">The saved settings could not be read. They have been kept unchanged. Choose Restore all, then Save to replace them.</string>
+    <string name="quick_reply_restore_all">Restore all</string>
+    <string name="quick_reply_save">Save</string>
+    <string name="quick_reply_saving">Saving…</string>
+    <string name="quick_reply_saved">Saved on this phone.</string>
+    <string name="quick_reply_failed">Could not save. Your changes have not been saved. Try again.</string>
+    <string name="quick_reply_cancel">Cancel</string>
+    <string name="quick_reply_position">Reply %1$d</string>
+    <string name="quick_reply_edit">Edit</string>
+    <string name="quick_reply_restore">Restore</string>
+    <string name="quick_reply_up">Move up</string>
+    <string name="quick_reply_down">Move down</string>
+    <string name="quick_reply_message">Reply text</string>
+    <string name="quick_reply_invalid_text">Enter 1–2000 characters, without unsupported control characters.</string>
+    <string name="quick_reply_use_text">Use text</string>
+    <string name="quick_reply_choose_default">Choose a default reply</string>
+</resources>

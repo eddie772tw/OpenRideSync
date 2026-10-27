@@ -1,0 +1,9 @@
+{
+  "projectId": "<original-service-projectId>",
+  "apiKey": "<original-service-apiKey>",
+  "applicationId": "<original-service-applicationId>",
+  "webClientId": "<original-service-webClientId>",
+  "authDomain": "<original-service-authDomain>",
+  "webApiKey": "<original-service-webApiKey>",
+  "hondaApiKey": "<original-service-hondaApiKey>"
+}

@@ -1,0 +1,5 @@
+<resources>
+    <string name="weather_report_intro">這是%1$s的天氣預報</string>
+    <string name="weather_report_line">%1$s天氣及溫度為%2$s及%3$s</string>
+    <plurals name="weather_report_hours"><item quantity="other">%d 小時</item></plurals>
+</resources>

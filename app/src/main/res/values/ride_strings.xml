@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ride_meter_brand" translatable="false">RoadSync</string>
+    <string name="ride_meter_off">OFF</string>
+    <string name="ride_music">Music</string>
+    <string name="ride_music_playing">Playing</string>
+    <string name="ride_volume">Volume</string>
+    <string name="ride_music_unknown">Unknown</string>
+    <string name="ride_music_choose_player">Choose a player on your phone</string>
+</resources>

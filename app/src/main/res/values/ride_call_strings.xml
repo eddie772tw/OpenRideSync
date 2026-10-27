@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ride_call">Calls</string>
+    <string name="ride_call_incoming">Incoming call</string>
+    <string name="ride_call_ongoing">Call ongoing</string>
+    <string name="ride_call_waiting">Check phone</string>
+    <string name="ride_call_unavailable">Call unavailable</string>
+    <string name="ride_call_multiple">Choose on phone</string>
+    <string name="ride_call_cancel">End call?</string>
+</resources>
