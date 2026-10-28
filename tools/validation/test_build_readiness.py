@@ -21,8 +21,8 @@ from dex_build_config import Dex, DexError
 SHA = "1" * 40
 CERT = "a" * 64
 VALUES = {"APPLICATION_ID": "org.openridesync.app", "BUILD_TYPE": "debug",
-          "SOURCE_COMMIT": SHA, "VERSION_CODE": 2, "VERSION_NAME": "0.1.0-alpha.1"}
-BADGING = """package: name='org.openridesync.app' versionCode='2' versionName='0.1.0-alpha.1' platformBuildVersionName='16'
+          "SOURCE_COMMIT": SHA, "VERSION_CODE": 3, "VERSION_NAME": "0.1.0-alpha.2"}
+BADGING = """package: name='org.openridesync.app' versionCode='3' versionName='0.1.0-alpha.2' platformBuildVersionName='16'
 minSdkVersion:'30'
 targetSdkVersion:'36'
 application-debuggable
@@ -254,8 +254,8 @@ class MetadataTests(unittest.TestCase):
 
     def test_manifest_changes_are_rejected(self):
         for text in (BADGING.replace("org.openridesync.app", "other.app"),
-                     BADGING.replace("versionCode='2'", "versionCode='3'"),
-                     BADGING.replace("0.1.0-alpha.1", "0.2.0"),
+                     BADGING.replace("versionCode='3'", "versionCode='4'"),
+                     BADGING.replace("0.1.0-alpha.2", "0.2.0"),
                      BADGING.replace("minSdkVersion:'30'", "minSdkVersion:'29'"),
                      BADGING.replace("targetSdkVersion:'36'", "targetSdkVersion:'35'"),
                      BADGING.replace("application-debuggable", "")):
