@@ -11,7 +11,7 @@
 OpenRideSync 面向使用 Honda RoadSync Gen1 通訊的車載儀表，將帳號、車庫、藍牙連線、把手互動、媒體與診斷整合到獨立的 Android App。專案使用 Kotlin、Jetpack Compose 與自行實作的 Java Gen1 encoder，延續既有的車端通訊研究，逐步建立面向使用者的騎乘流程。
 
 > [!NOTE]
-> 首個原始碼預發行為 [`v0.1.0-alpha.1`](https://github.com/eddie772tw/OpenRideSync/releases/tag/v0.1.0-alpha.1)，本次不附 APK。OpenRideSync 並非 Honda 官方 App；公開原始碼的預設建置不含原服務登入設定，可查看本機介面、設定導引與診斷，帳號及車輛服務另需適當配置。
+> 首個原始碼預發行為 [`v0.1.0-alpha.1`](https://github.com/eddie772tw/OpenRideSync/releases/tag/v0.1.0-alpha.1)。官方發行 APK 由 GitHub Actions 透過 Repository Secrets 注入原服務登入設定並以專屬發行金鑰簽署；公開原始碼的預設本機建置不含原服務登入設定，自行建置者需另外從自己的原廠 App 環境取得設定參數才可啟用登入與車輛服務。OpenRideSync 並非 Honda 官方 App，**首次使用前請先在原廠 Honda RoadSync App 完成帳號註冊與初始設定**（新帳號直接初始化列為後續版本開發項目）。
 
 ## 畫面預覽
 
@@ -37,7 +37,7 @@ OpenRideSync 面向使用 Honda RoadSync Gen1 通訊的車載儀表，將帳號�
 | 功能 | 目前內容 | 使用條件與驗證範圍 |
 | --- | --- | --- |
 | 設定與外觀 | 設定導引、功能權限說明、日間／夜間主題、版本與設定資訊 | 本機功能可在未登入時開啟；Alpha 介面持續完善中 |
-| 帳號與車庫 | Google／Firebase 登入流程、Honda 帳號與車型資料讀取、已保存車輛管理 | 需要原服務登入設定與實際登入；設定存在不等於登入成功 |
+| 帳號與車庫 | Google／Firebase 登入流程、Honda 帳號與車型資料讀取、已保存車輛管理 | 需先於原廠 App 完成首次帳號註冊；需要原服務登入設定與實際登入，設定存在不等於登入成功 |
 | Gen1 連線與儀表 | 明確配對與連線、Gen1 通訊、儀表畫面資料傳送與把手互動 | 研究基線已有一次基本實車成功；各手機、車型及交付 APK 仍需分別驗證 |
 | 媒體與通訊 | 播放器選擇、媒體控制、通話與訊息處理、快速回覆及語音語言設定 | 依功能需要系統授權、登入或可用的第三方 App；完整實車情境仍待驗 |
 | 導航與騎乘紀錄 | 導航資料整合、騎乘紀錄讀取、旅程錄製與待傳佇列 | 完整導航及真實旅程採樣、上傳接受與回讀整鏈仍在驗證；錄製與自動上傳預設關閉 |
@@ -47,9 +47,13 @@ OpenRideSync 面向使用 Honda RoadSync Gen1 通訊的車載儀表，將帳號�
 
 ## 快速開始
 
-### 了解目前版本
+### 了解目前版本與安裝方式
 
-目前提供 [`v0.1.0-alpha.1` 原始碼預發行](https://github.com/eddie772tw/OpenRideSync/releases/tag/v0.1.0-alpha.1)，尚未提供安裝 APK。版本變更見 [CHANGELOG](CHANGELOG.md)。一般使用者可先閱讀[使用流程](docs/GETTING-STARTED.md)與[相容性範圍](docs/COMPATIBILITY.md)；自行建置者請先確認是否需要原服務登入設定，以及 APK 的簽署與升級方式。
+版本變更見 [CHANGELOG](CHANGELOG.md)。一般使用者請先閱讀[使用流程](docs/GETTING-STARTED.md)與[相容性範圍](docs/COMPATIBILITY.md)：
+
+- **官方發行 APK**：透過 GitHub Releases 提供，由發行工作流程注入登入設定並使用 OpenRideSync 專屬且持續維護的發行簽章簽署，後續版本可直接保留資料覆蓋升級。
+- **帳號前置條件**：本 App 目前不支援新帳號直接註冊或首次條款初始化；**請先在原廠 Honda RoadSync App 完成首次註冊與設定**，再使用同一個 Google 帳號登入 OpenRideSync。
+- **自行建置者**：公開原始碼不含私有設定或金鑰；若需自行建置可登入版本，需先從自己的原廠 App 環境取得相關 client 設定參數，並注意不同簽章的 APK 無法直接覆蓋升級。
 
 ### 從原始碼建置
 
@@ -82,12 +86,26 @@ OpenRideSync 面向使用 Honda RoadSync Gen1 通訊的車載儀表，將帳號�
 產物位於 `app/build/outputs/apk/debug/app-debug.apk`。預設建置未包含原服務登入設定，可用於查看本機介面、設定導引與診斷；實際登入與車輛服務需要配置。不同簽章的 APK 不能直接作為既有安裝的保留資料更新，升級前請先確認簽署身分。
 
 <details>
-<summary>需要原服務登入設定的開發者</summary>
+<summary>需要原服務登入設定與自行簽署的開發者</summary>
 
-取得適當的 client 設定後，將檔案保存在公開 repo 之外，並明確指定單一檔案：
+公開 repo 不提供原服務 client 參數。自行建置者需先從自己合法安裝的原廠 App 環境中取得對應的 Firebase／Honda client 設定，整理為單一 JSON 檔案保存在公開 repo 之外（包含 `projectId`、`apiKey`、`applicationId`、`webClientId`、`authDomain`、`webApiKey` 及選填的 `hondaApiKey`），並在建置時明確指定：
 
 ```sh
 ./gradlew :app:assembleDebug -PwithHondaConfig=true -PhondaConfigFile=/path/to/private-auth-client.json -PwithOemUiAssets=false -PsourceCommit="$(git rev-parse HEAD)"
+```
+
+若要建置並以自備的 Keystore 簽署 Release APK，可一併傳入簽章屬性（或設定同名環境變數 `RELEASE_STORE_FILE`、`RELEASE_STORE_PASSWORD`、`RELEASE_KEY_ALIAS`、`RELEASE_KEY_PASSWORD`）：
+
+```sh
+./gradlew :app:assembleRelease \
+  -PwithHondaConfig=true \
+  -PhondaConfigFile=/path/to/private-auth-client.json \
+  -PreleaseStoreFile=/path/to/release.keystore \
+  -PreleaseStorePassword="<store-password>" \
+  -PreleaseKeyAlias="<key-alias>" \
+  -PreleaseKeyPassword="<key-password>" \
+  -PwithOemUiAssets=false \
+  -PsourceCommit="$(git rev-parse HEAD)"
 ```
 
 Windows 請使用 `gradlew.bat` 與上方 PowerShell 的來源版本參數寫法。

@@ -83,7 +83,7 @@ fun AccountScreen(
                     AuthStatus.UNAVAILABLE -> "此版本尚未設定帳號登入。你仍可使用本機診斷功能。"
                     AuthStatus.SIGNING_IN -> "正在完成 Google 登入，請稍候。"
                     AuthStatus.ERROR -> "登入未完成，請稍後再試或查看診斷資訊。"
-                    else -> "使用原本的 Google 帳號登入，讀取 Honda RoadSync 帳號資訊。"
+                    else -> "請先在原廠 Honda RoadSync App 完成首次註冊與初始設定，再使用同一個 Google 帳號登入（目前版本不支援直接註冊新帳號）。"
                 }, Modifier.semantics { liveRegion = LiveRegionMode.Polite })
                 if (auth.status == AuthStatus.SIGNING_IN) LinearProgressIndicator(Modifier.fillMaxWidth())
                 Button(onClick = onLogin, enabled = auth.status != AuthStatus.UNAVAILABLE && auth.status != AuthStatus.SIGNING_IN,
@@ -129,6 +129,7 @@ internal fun residence(code: String?): String = when {
 
 private fun accountMessage(state: AccountState): String = when {
     state.busy -> "正在更新 Honda 帳號資訊…"
+    state.registrationRequired -> "找不到對應的 Honda 帳號。請先在原廠 Honda RoadSync App 完成首次註冊與條款設定後，再回來重新登入或讀取。"
     state.requiresLogin -> "請重新登入，以確認 Honda 帳號及居住地。"
     state.cancelled -> "已取消更新。可隨時重新讀取帳號資訊。"
     state.errorCode != null -> "暫時無法讀取 Honda 帳號，請稍後再試。"

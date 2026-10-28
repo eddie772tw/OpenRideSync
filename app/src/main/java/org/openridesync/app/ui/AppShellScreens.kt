@@ -79,7 +79,7 @@ internal fun SetupScreen(status: ShellStatus, onOpen: (String) -> Unit, onBack: 
             0 -> {
                 Text("使用原本的 Google 帳號", style = MaterialTheme.typography.titleLarge)
                 Text(status.accountMessage)
-                Text("帳號頁會顯示登入與 Honda 帳號讀取的真實結果。車型與騎乘紀錄仍由各功能入口讀取；此處沒有背景批次下載。")
+                Text("請先確認該帳號已在原廠 Honda RoadSync App 完成首次註冊與初始設定（本版本不支援直接建立新帳號）。帳號頁會顯示登入與 Honda 帳號讀取的真實結果；車型與騎乘紀錄仍由各功能入口讀取。")
                 Entry("帳號管理", "未配置或不想現在登入，都可以繼續查看導覽及本機功能。",
                     "查看帳號與登入", "setup_account") { onOpen("account") }
                 Button(onClick = { move(1) }, modifier = Modifier.fillMaxWidth().testTag("setup_next")) {

@@ -29,7 +29,8 @@ data class AccountState(
     val countryErrorCode: String? = null,
     val cancelled: Boolean = false,
 ) {
-    val requiresLogin: Boolean get() = errorCode == "NOT_FOUND" || errorCode in LOGIN_ERRORS || countryErrorCode in LOGIN_ERRORS
+    val registrationRequired: Boolean get() = errorCode == "NOT_FOUND"
+    val requiresLogin: Boolean get() = registrationRequired || errorCode in LOGIN_ERRORS || countryErrorCode in LOGIN_ERRORS
     private companion object { val LOGIN_ERRORS = setOf("UNAUTHENTICATED", "AUTH_REQUIRED") }
 }
 

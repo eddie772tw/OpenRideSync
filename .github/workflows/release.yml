@@ -1,0 +1,121 @@
+name: Release APK
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: microsoft
+          java-version: '17'
+          cache: gradle
+      - uses: android-actions/setup-android@be39fa834029ff78f1a44aa3bb0819b8fc2bd8fd # v4.0.4
+      - name: Android SDK
+        run: sdkmanager "platforms;android-36" "build-tools;36.0.0"
+      - name: Public source and offline helper checks
+        run: |
+          python tools/check_public_source.py
+          python -m unittest discover -s tools -p 'test_*.py'
+          python -m unittest discover -s tools/validation -p 'test_*.py'
+          python -m unittest discover -s tools/diagnostics -p 'test_*.py'
+          node tools/auth/login_test.js
+      - name: Clean host tests and lint
+        run: >
+          ./gradlew --no-daemon --max-workers=2
+          :diagnostics:check :honda:check :auth-bridge:check
+          :app:testDebugUnitTest :app:lintDebug
+          -PwithHondaConfig=false -PwithOemUiAssets=false -PsourceCommit=${{ github.sha }}
+      - name: Prepare signing keystore and client configuration in runner temp
+        env:
+          HONDA_AUTH_CLIENT_JSON: ${{ secrets.HONDA_AUTH_CLIENT_JSON }}
+          RELEASE_KEYSTORE_BASE64: ${{ secrets.RELEASE_KEYSTORE_BASE64 }}
+          RELEASE_STORE_PASSWORD: ${{ secrets.RELEASE_STORE_PASSWORD }}
+          RELEASE_KEY_ALIAS: ${{ secrets.RELEASE_KEY_ALIAS }}
+          RELEASE_KEY_PASSWORD: ${{ secrets.RELEASE_KEY_PASSWORD }}
+        run: |
+          if [ -z "$HONDA_AUTH_CLIENT_JSON" ] || [ -z "$RELEASE_KEYSTORE_BASE64" ] || [ -z "$RELEASE_STORE_PASSWORD" ] || [ -z "$RELEASE_KEY_ALIAS" ] || [ -z "$RELEASE_KEY_PASSWORD" ]; then
+            echo "Missing required release secrets (HONDA_AUTH_CLIENT_JSON, RELEASE_KEYSTORE_BASE64, RELEASE_STORE_PASSWORD, RELEASE_KEY_ALIAS, RELEASE_KEY_PASSWORD)" >&2
+            exit 1
+          fi
+          umask 077
+          printf '%s' "$HONDA_AUTH_CLIENT_JSON" > "${RUNNER_TEMP}/auth-client.json"
+          printf '%s' "$RELEASE_KEYSTORE_BASE64" | base64 --decode > "${RUNNER_TEMP}/release.keystore"
+      - name: Assemble signed configured Release APK
+        env:
+          RELEASE_STORE_FILE: ${{ runner.temp }}/release.keystore
+          RELEASE_STORE_PASSWORD: ${{ secrets.RELEASE_STORE_PASSWORD }}
+          RELEASE_KEY_ALIAS: ${{ secrets.RELEASE_KEY_ALIAS }}
+          RELEASE_KEY_PASSWORD: ${{ secrets.RELEASE_KEY_PASSWORD }}
+        run: >
+          ./gradlew --no-daemon --max-workers=2
+          :app:assembleRelease :app:lintRelease
+          -PwithHondaConfig=true
+          -PhondaConfigFile=${{ runner.temp }}/auth-client.json
+          -PwithOemUiAssets=false
+          -PsourceCommit=${{ github.sha }}
+      - name: Verify signed Release APK and generate SHA-256 manifest
+        env:
+          EXPECTED_SIGNER_SHA256: ${{ secrets.RELEASE_SIGNER_SHA256 }}
+        run: |
+          APK_PATH="app/build/outputs/apk/release/app-release.apk"
+          test -f "$APK_PATH"
+          APKSIGNER="${ANDROID_HOME}/build-tools/36.0.0/apksigner"
+          AAPT2="${ANDROID_HOME}/build-tools/36.0.0/aapt2"
+          VERIFY_OUT=$("$APKSIGNER" verify --verbose --print-certs "$APK_PATH")
+          echo "$VERIFY_OUT"
+          if [ -n "$EXPECTED_SIGNER_SHA256" ]; then
+            ACTUAL_SIGNER=$(echo "$VERIFY_OUT" | sed -n 's/^Signer #1 certificate SHA-256 digest: \([0-9a-fA-F]*\)\s*$/\L\1/p')
+            EXPECTED_LOWER=$(echo "$EXPECTED_SIGNER_SHA256" | tr 'A-F' 'a-f')
+            if [ "$ACTUAL_SIGNER" != "$EXPECTED_LOWER" ]; then
+              echo "Signer SHA-256 mismatch: expected $EXPECTED_LOWER, got $ACTUAL_SIGNER" >&2
+              exit 1
+            fi
+          fi
+          BADGING=$("$AAPT2" dump badging "$APK_PATH")
+          if echo "$BADGING" | grep -q "^application-debuggable$"; then
+            echo "Release APK must not be debuggable" >&2
+            exit 1
+          fi
+          VERSION_NAME=$(echo "$BADGING" | sed -n "s/^package: .*versionName='\([^']*\)'.*$/\1/p")
+          test -n "$VERSION_NAME"
+          python -c "import zipfile; z = zipfile.ZipFile('$APK_PATH'); assert 'assets/auth-client.json' in z.namelist(), 'Missing configured auth-client.json in APK'"
+          OUT_DIR="${RUNNER_TEMP}/release-dist"
+          mkdir -p "$OUT_DIR"
+          TARGET_APK="${OUT_DIR}/OpenRideSync-${VERSION_NAME}.apk"
+          cp "$APK_PATH" "$TARGET_APK"
+          (cd "$OUT_DIR" && sha256sum "$(basename "$TARGET_APK")" > "$(basename "$TARGET_APK").sha256")
+          echo "RELEASE_APK=${TARGET_APK}" >> "$GITHUB_ENV"
+          echo "RELEASE_SHA256=${TARGET_APK}.sha256" >> "$GITHUB_ENV"
+      - name: Upload release artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: OpenRideSync-release-apk
+          path: |
+            ${{ env.RELEASE_APK }}
+            ${{ env.RELEASE_SHA256 }}
+          if-no-files-found: error
+      - name: Attach APK to GitHub Release on tag push
+        if: startsWith(github.ref, 'refs/tags/v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG_NAME="${GITHUB_REF#refs/tags/}"
+          if gh release view "$TAG_NAME" >/dev/null 2>&1; then
+            gh release upload "$TAG_NAME" "$RELEASE_APK" "$RELEASE_SHA256" --clobber
+          else
+            gh release create "$TAG_NAME" "$RELEASE_APK" "$RELEASE_SHA256" --title "$TAG_NAME" --generate-notes
+          fi
+      - name: Clean temporary secrets
+        if: always()
+        run: rm -f "${RUNNER_TEMP}/auth-client.json" "${RUNNER_TEMP}/release.keystore"

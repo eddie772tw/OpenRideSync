@@ -116,6 +116,7 @@ class MainActivity : ComponentActivity() {
                 AuthStatus.SIGNING_IN -> "登入進行中；尚未確認帳號。"
                 AuthStatus.ERROR -> "登入未完成，可到帳號頁重試或查看診斷。"
                 AuthStatus.SIGNED_IN -> when {
+                    accountState.registrationRequired -> "尚未找到 Honda 帳號；請先在原廠 RoadSync App 完成首次註冊與設定。"
                     accountState.requiresLogin -> "需要重新登入確認 Honda 帳號。"
                     accountState.busy -> "已登入，正在讀取 Honda 帳號。"
                     accountState.errorCode != null -> "已登入，但 Honda 帳號讀取失敗；可至帳號頁重試。"

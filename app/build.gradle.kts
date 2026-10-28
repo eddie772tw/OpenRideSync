@@ -56,6 +56,35 @@ android {
     }
     buildFeatures { compose = true; buildConfig = true }
     testOptions.unitTests.isIncludeAndroidResources = true
+    val releaseStoreFile = providers.gradleProperty("releaseStoreFile")
+        .orElse(providers.environmentVariable("RELEASE_STORE_FILE")).orNull
+    val releaseStorePassword = providers.gradleProperty("releaseStorePassword")
+        .orElse(providers.environmentVariable("RELEASE_STORE_PASSWORD")).orNull
+    val releaseKeyAlias = providers.gradleProperty("releaseKeyAlias")
+        .orElse(providers.environmentVariable("RELEASE_KEY_ALIAS")).orNull
+    val releaseKeyPassword = providers.gradleProperty("releaseKeyPassword")
+        .orElse(providers.environmentVariable("RELEASE_KEY_PASSWORD")).orNull
+    signingConfigs {
+        if (!releaseStoreFile.isNullOrBlank()) {
+            create("release") {
+                val keystore = file(releaseStoreFile)
+                check(keystore.isFile) { "Release keystore file does not exist" }
+                storeFile = keystore
+                storePassword = checkNotNull(releaseStorePassword) { "Missing releaseStorePassword" }
+                keyAlias = checkNotNull(releaseKeyAlias) { "Missing releaseKeyAlias" }
+                keyPassword = checkNotNull(releaseKeyPassword) { "Missing releaseKeyPassword" }
+            }
+        }
+    }
+    buildTypes {
+        getByName("release") {
+            isMinifyEnabled = false
+            isShrinkResources = false
+            if (signingConfigs.findByName("release") != null) {
+                signingConfig = signingConfigs.getByName("release")
+            }
+        }
+    }
     if (providers.gradleProperty("withHondaConfig").getOrElse("false") == "true") {
         val config = providers.gradleProperty("hondaConfigFile").orNull?.let { file(it) }
         check(config != null && config.isFile) {

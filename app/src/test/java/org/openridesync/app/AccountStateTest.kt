@@ -13,8 +13,11 @@ class AccountStateTest {
         assertFalse(partial.requiresLogin)
         assertFalse(partial.copy(countryErrorCode = "NOT_FOUND").requiresLogin)
         assertTrue(partial.copy(countryErrorCode = "UNAUTHENTICATED").requiresLogin)
+        assertFalse(partial.copy(countryErrorCode = "UNAUTHENTICATED").registrationRequired)
         assertTrue(AccountState(errorCode = "NOT_FOUND").requiresLogin)
+        assertTrue(AccountState(errorCode = "NOT_FOUND").registrationRequired)
         assertFalse(AccountState(cancelled = true).requiresLogin)
+        assertFalse(AccountState(cancelled = true).registrationRequired)
     }
 
     @Test fun residenceUsesHondaCodeAndCurrentLanguageWithoutGuessingMissingCountry() {
