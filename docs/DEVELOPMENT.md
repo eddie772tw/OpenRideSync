@@ -14,6 +14,7 @@
 - **開發者自行建置**：公開儲存庫不包含原服務設定或簽章金鑰。自行建置者須從自己的原廠 App 環境取得 client 參數後，透過 `-PwithHondaConfig=true -PhondaConfigFile=...` 注入。
 - **帳號前置條件與後續開發項目**：目前版本要求使用者必須先在原廠 Honda RoadSync App 完成首次註冊與條款初始化；「新帳號直接初始化流程（`LoginFromAndroid` 等）」列為未來版本開發項目。
 - **核對工具（Validation Tooling）**：`tools/validation/check_build_readiness.py` 目前專責日常 CI 的 `clean-unconfigured-debug` 檢查；Release 工作流程先以 `apksigner`、badging 與 ZIP 檢查取代，針對已配置 Release APK 的專用核對規則列為後續補充項目。
-- **相容性與驗收**：目前基準已視為通過首版放行門檻；後續仍持續擴充更多手機／車型相容性條目、長時間背景穩定性與真實旅程上傳回讀紀錄。
+- **相容性與驗收**：研究候選新增五次成功初始化、203筆位置保存及14批上傳API／本機佇列確認；四次runtime超過30分鐘。此結果與公開交付APK分開驗收，尚不涵蓋背景／鎖屏、明確停止及完整功能矩陣，見[實測回饋](FIELD-VALIDATION-2026-11-02.md)及[相容性範圍](COMPATIBILITY.md)。
+- **實測後續工作**：定位7筆Control非成功回覆；補齊新旅程trip／point明細、完整路徑與原版App可見。下次同步保留當次HCI及安全的命令／回覆診斷後再定位根因；保留不確定上傳批次不得自動重送的行為。具體工作列於[實測回饋的開發待辦](FIELD-VALIDATION-2026-11-02.md#開發回饋與後續驗收)。
 
 每個候選記錄 exact source、APK SHA-256、簽章及配置。重建不得冒稱為歷史 APK 的逐位元組複本；SOURCE_COMMIT 宣告需配合乾淨來源檢查。正式簽署材料與私密設定透過 GitHub Secrets 或私有環境管理，不寫入公開 Git 歷史。
